@@ -18,7 +18,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li v-if="auth" class="nav-item">
                         <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
                     </li>
                     <li class="nav-item">
@@ -35,6 +35,16 @@ export default {
   name: 'AppHeader',
   props: {
     logo: String
+  },
+  computed: {
+    auth () {
+      return this.$store.getters.IS_AUTH
+    }
+  },
+  watch: {
+    auth (status) {
+      this.auth = status
+    }
   }
 }
 </script>

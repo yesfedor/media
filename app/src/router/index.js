@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Main from '../views/Main.vue'
+import Error404 from '../views/Error404.vue'
 
 const routes = [
   {
@@ -11,50 +12,44 @@ const routes = [
   {
     path: '/search',
     name: 'Search',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
   },
   {
-    path: '/playlist',
+    path: '/playlist/:alias',
     name: 'Playlist',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "playlist" */ '../views/Playlist.vue')
+    component: () => import(/* webpackChunkName: "playlist" */ '../views/Playlist.vue'),
+    props: true
   },
   {
     path: '/top10',
     name: 'Top10',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "top10" */ '../views/Top10.vue')
   },
   {
     path: '/subscriptions',
     name: 'Subscriptions',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "subscriptions" */ '../views/Subscriptions.vue')
   },
   {
     path: '/auth',
     name: 'Auth',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "auth" */ '../views/Auth.vue')
   },
   {
-    path: '/watch',
+    path: '/watch/:kpid',
     name: 'Watch',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "watch" */ '../views/Watch.vue')
+    component: () => import(/* webpackChunkName: "watch" */ '../views/Watch.vue'),
+    props: true
+  },
+  {
+    path: '/welcome',
+    name: 'Intro',
+    component: () => import(/* webpackChunkName: "intro" */ '../views/Intro.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'Error404',
+    component: Error404
   }
 ]
 

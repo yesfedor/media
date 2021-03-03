@@ -7,3 +7,28 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'Main',
+  data () {
+    return {
+      login: '',
+      password: ''
+    }
+  },
+  mounted () {
+    this.$store.dispatch('AUTH', { login: 'yesfedor', password: 'asd486982asd' })
+  },
+  computed: {
+    auth () {
+      return this.$store.getters.IS_AUTH
+    }
+  },
+  watch: {
+    auth (status) {
+      this.auth = status
+    }
+  }
+}
+</script>

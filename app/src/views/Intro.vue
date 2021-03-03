@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="my-0 py-3">Watch</h1>
+        <h1 class="my-0 py-3">Intro</h1>
       </div>
     </div>
   </div>
@@ -10,11 +10,13 @@
 
 <script>
 export default {
-  name: 'Watch',
-  props: {
-    kpid: Number
-  },
+  name: 'Intro',
   data () {
+    return {
+      data: ''
+    }
+  },
+  mounted () {
 
   }
 }
