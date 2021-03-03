@@ -1,0 +1,37 @@
+{
+    "appname":"Your public app name",
+    "site-name":"SiteName",
+    "site-logo":"INY",
+    "routes": {
+        "main": {
+            "access":"default",
+            "title":"localeStr",
+            "description":"localeStr",
+            "keywords":"localeStr",
+            "ogtype":"localeStr",
+            "ogsite_name":"localeStr",
+            "ogimage":"localeStr",
+            "page":"main"
+        },
+        "about": {
+            "access":"default",
+            "title":"localeStr",
+            "description":"localeStr",
+            "keywords":"localeStr",
+            "ogtype":"localeStr",
+            "ogsite_name":"localeStr",
+            "ogimage":"localeStr",
+            "page":"about"
+        },
+        "info": {
+            "access":"default",
+            "title":"localeStr",
+            "description":"localeStr",
+            "keywords":"localeStr",
+            "ogtype":"localeStr",
+            "ogsite_name":"localeStr",
+            "ogimage":"localeStr",
+            "page":"info"
+        }
+    }
+}
