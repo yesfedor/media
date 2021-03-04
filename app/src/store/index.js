@@ -12,7 +12,7 @@ export default createStore({
     }
   },
   getters: {
-    IS_ATUH: state => {
+    IS_AUTH: state => {
       return state.user.auth
     },
     USER: state => {

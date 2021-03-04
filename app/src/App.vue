@@ -1,21 +1,20 @@
 <template>
   <AppHeader :logo="logo" />
   <router-view class="router-view-height"></router-view>
-  <AppFooter :logo="logo" />
+  <component :is="asd" />
 </template>
 
 <script>
 import AppHeader from './components/AppHeader'
-import AppFooter from './components/AppFooter'
 
 export default {
   name: 'App',
   components: {
-    AppHeader,
-    AppFooter
+    AppHeader
   },
   data () {
     return {
+      asd: 'AppFooter',
       logo: 'INY Media'
     }
   },
@@ -36,11 +35,7 @@ export default {
 </script>
 
 <style>
-@import url('./assets/dark.css');
-@import url('./assets/themes.css');
-@import url('./assets/common.css');
-
 .router-view-height {
-  min-height: calc(100vh - 116.59px) !important;
+  min-height: calc(100vh - 161px) !important;
 }
 </style>

@@ -6,7 +6,7 @@
                 <i class="fas fa-bars theme-title"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <router-link class="nav-link theme-title" to="/">Главная</router-link>
                     </li>
@@ -17,7 +17,7 @@
                         <router-link class="nav-link theme-title" to="/top10">В тренде</router-link>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li v-if="auth" class="nav-item">
                         <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
                     </li>
@@ -36,13 +36,21 @@ export default {
   props: {
     logo: String
   },
+  data () {
+    return {
+      auth: undefined
+    }
+  },
+  mounted () {
+    this.auth = this.$store.getters.IS_AUTH
+  },
   computed: {
-    auth () {
+    get_auth () {
       return this.$store.getters.IS_AUTH
     }
   },
   watch: {
-    auth (status) {
+    get_auth (status) {
       this.auth = status
     }
   }
