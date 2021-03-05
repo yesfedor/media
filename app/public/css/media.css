@@ -17,51 +17,10 @@
     background-color: #00000088;
 }
 
-.card-poster_view-default {
+.card-poster_view-default, card-poster_view-max-content {
     /*height: 60vh;*/
     height: auto;
 }
-.card-poster_view-max-content {
-    /*height: 30vh;*/
-    height: auto;
-}
-/*
-@media (min-width: 576px) {
-    .card-poster_view-default {
-        height: 60vh;
-    }
-    .card-poster_view-max-content {
-        height: 30vh;
-    }
-}
-
-@media (min-width: 768px) {
-    .card-poster_view-default {
-        height: 60vh;
-    }
-    .card-poster_view-max-content {
-        height: 40vh;
-    }
-}
-
-@media (min-width: 992px) {
-    .card-poster_view-default {
-        height: 60vh;
-    }
-    .card-poster_view-max-content {
-        height: 40vh;
-    }
-}
-
-@media (min-width: 1200px) {
-    .card-poster_view-default {
-        height: 60vh;
-    }
-    .card-poster_view-max-content {
-        height: 30vh;
-    }
-}
-*/
 
 .bg-poster-image {
     width: 100vw;
