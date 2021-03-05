@@ -29,3 +29,6 @@ main {
 .not-select {user-select: none;-ms-user-select: none;-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;}
 .mark-pre {white-space: pre-wrap;}
 .extension-block {display: block;content: '';cursor: pointer;padding: 0,5em;}
+.cursor-pointer {
+    cursor: pointer !important;
+}
