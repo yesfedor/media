@@ -13,7 +13,9 @@
 
 <script>
 import MediaPlaylist from '../components/MediaPlaylist'
-
+/*
+  main list(tops):
+*/
 export default {
   name: 'Main',
   components: {
