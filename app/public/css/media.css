@@ -4,7 +4,7 @@
 .card-poster {
     /* height: 70vh; */
     filter: grayscale(1);
-    background-color: #242424aa;
+    background-color: #242424;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,15 +14,18 @@
 }
 .card-poster:hover {
     filter: grayscale(0);
-    background-color: #00000066;
+    background-color: #00000088;
 }
 
 .card-poster_view-default {
-    height: 60vh;
+    /*height: 60vh;*/
+    height: auto;
 }
 .card-poster_view-max-content {
-    height: 30vh;
+    /*height: 30vh;*/
+    height: auto;
 }
+/*
 @media (min-width: 576px) {
     .card-poster_view-default {
         height: 60vh;
@@ -58,6 +61,7 @@
         height: 30vh;
     }
 }
+*/
 
 .bg-poster-image {
     width: 100vw;

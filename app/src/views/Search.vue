@@ -5,7 +5,7 @@
         <h1 class="mb-3 py-3">Поиск</h1>
       </div>
       <div class="col-12 col-md-6 col-lg-4 md-form md-outline px-0">
-        <input v-model="query" @change="search()" @keypress.enter="search()" type="text" id="searchinput" class="form-control theme-panel theme-title">
+        <input v-model="query" @change="search()" @keypress.enter="search()" type="search" id="searchinput" class="form-control theme-panel theme-title">
         <label class="active theme-panel mx-2" for="searchinput">Начните искать</label>
       </div>
     </div>
