@@ -15,15 +15,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
   },
   {
-    path: '/playlist/:alias',
+    path: '/playlist:alias',
     name: 'Playlist',
     component: () => import(/* webpackChunkName: "playlist" */ '../views/Playlist.vue'),
     props: true
   },
   {
-    path: '/top10',
-    name: 'Top10',
-    component: () => import(/* webpackChunkName: "top10" */ '../views/Top10.vue')
+    path: '/tops',
+    name: 'Tops',
+    component: () => import(/* webpackChunkName: "tops" */ '../views/Tops.vue')
   },
   {
     path: '/subscriptions',
@@ -36,7 +36,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "auth" */ '../views/Auth.vue')
   },
   {
-    path: '/watch/:kpid',
+    path: '/watch:kpid',
     name: 'Watch',
     component: () => import(/* webpackChunkName: "watch" */ '../views/Watch.vue'),
     props: true

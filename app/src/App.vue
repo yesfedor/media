@@ -1,16 +1,18 @@
 <template>
   <AppHeader :logo="logo" />
   <router-view class="router-view-height"></router-view>
-  <component :is="asd" />
+  <AppFooter :logo="logo" />
 </template>
 
 <script>
 import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 
 export default {
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   },
   data () {
     return {
@@ -36,6 +38,6 @@ export default {
 
 <style>
 .router-view-height {
-  min-height: calc(100vh - 161px) !important;
+  min-height: 88.4vh !important;
 }
 </style>

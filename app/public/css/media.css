@@ -61,7 +61,7 @@
 
 .bg-poster-image {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     top: 0px;
     left: 0px;
     bottom: 0px;
@@ -77,7 +77,7 @@
 .bg-poster-image:after {
     content: '';
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     top: 0px;
     left: 0px;
     bottom: 0px;

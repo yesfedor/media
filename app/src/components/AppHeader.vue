@@ -14,10 +14,13 @@
                         <router-link class="nav-link theme-title" to="/search">Поиск</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link theme-title" to="/top10">В тренде</router-link>
+                        <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                        <router-link class="nav-link theme-title" to="/watch1177719">Смотреть</router-link>
+                    </li>
                     <li v-if="auth" class="nav-item">
                         <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
                     </li>
