@@ -1,7 +1,7 @@
 <template>
     <div class="container pt-5">
       <div v-if="!status" class="row d-flex justify-content-center align-items-center">
-        <div class="col-12 col-lg-6 theme-panel border rounded text-center px-0">
+        <div class="col-12 col-lg-6 theme-panel border rounded text-center z-depth-3 px-0">
           <h3 class="mt-2 py-2">Войти</h3>
           <hr class="w-100 border-white mt-2">
           <form id="app-login" class="row my-0 py-0 p-3">
