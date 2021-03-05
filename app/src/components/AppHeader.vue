@@ -18,9 +18,6 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                        <router-link class="nav-link theme-title" to="/watch1177719">Смотреть</router-link>
-                    </li>
                     <li v-if="auth" class="nav-item">
                         <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
                     </li>

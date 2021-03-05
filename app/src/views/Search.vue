@@ -1,17 +1,20 @@
 <template>
   <div class="container-fluid pt-5">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-12 text-center">
-        <h1 class="mb-3 py-3">В тренде</h1>
+        <h1 class="mb-3 py-3">Поиск</h1>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 md-form md-outline px-0">
+        <input v-model="query" @change="search()" @keypress.enter="search()" type="text" id="searchinput" class="form-control theme-panel theme-title">
+        <label class="active theme-panel mx-2" for="searchinput">Начните искать</label>
       </div>
     </div>
-    <div v-if="topsData.length > 0" class="row justify-content-center">
-      <MediaCart v-for="cart in topsData" :key="cart.filmId" view="default" :kpid="cart.filmId" :type="cart.type" :nameRu="cart.nameRu" :year="cart.year" />
+    <div v-if="code == 200" class="row justify-content-center">
+      <MediaCart v-for="cart in searchData" :key="cart.filmId" view="default" :kpid="cart.filmId" :type="cart.type" :nameRu="cart.nameRu" :year="cart.year" />
     </div>
     <div v-else class="row justify-content-center">
       <div class="col-12 col-md-6 col-lg-4 text-center border border-white theme-panel rounded z-depth-3 py-4">
-        <h4 class="mt-2 mb-3">Как-то здесь пусто</h4>
-        <router-link class="btn btn-outline-white btn-rounded mt-3 mb-2 z-depth-0" to="/search">К поиску</router-link>
+        <h4 class="my-2">Ничего не нашлось</h4>
       </div>
     </div>
   </div>
@@ -28,15 +31,20 @@ export default {
   },
   data () {
     return {
-      topsData: []
+      code: 404,
+      searchData: [],
+      query: ''
     }
   },
-  mounted () {
-    axios
-      .get('https://iny.su/api.php?_action=media.getTop10&v=0.1')
-      .then(res => {
-        this.topsData = res.data.topData
-      })
+  methods: {
+    search () {
+      axios
+        .get('https://iny.su/api.php?_action=media.search&v=0.1&query=' + this.query)
+        .then(res => {
+          this.code = res.data.code
+          this.searchData = res.data.content
+        })
+    }
   }
 }
 </script>
