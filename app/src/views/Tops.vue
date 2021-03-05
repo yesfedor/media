@@ -22,7 +22,7 @@ import axios from 'axios'
 import MediaCart from '../components/MediaCart'
 
 export default {
-  name: 'Subscriptions',
+  name: 'Tops',
   components: {
     MediaCart
   },
