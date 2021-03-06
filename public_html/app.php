@@ -45,17 +45,17 @@ include_once($core);
         <link rel="stylesheet" href="/css/themes.css">
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/media.css">
-        <link href="/js/auth.3b40a5ec.js" rel="prefetch">
-        <link href="/js/intro.879d8cd7.js" rel="prefetch">
-        <link href="/js/playlist.29ef8a9a.js" rel="prefetch">
-        <link href="/js/search.7acca753.js" rel="prefetch">
-        <link href="/js/subscriptions.6130d604.js" rel="prefetch">
-        <link href="/js/tops.40681378.js" rel="prefetch">
-        <link href="/js/watch.6b220ac5.js" rel="prefetch">
-        <link href="/css/app.d18eb381.css" rel="preload" as="style">
-        <link href="/js/app.00fbdc2e.js" rel="preload" as="script">
+        <link href="/js/auth.8c6d438d.js" rel="prefetch">
+        <link href="/js/intro.ddf0e348.js" rel="prefetch">
+        <link href="/js/playlist.09976427.js" rel="prefetch">
+        <link href="/js/search.6ea3d4bd.js" rel="prefetch">
+        <link href="/js/subscriptions.9185552e.js" rel="prefetch">
+        <link href="/js/tops.e4e6e737.js" rel="prefetch">
+        <link href="/js/watch.20d1d18c.js" rel="prefetch">
+        <link href="/css/app.c53cd8cc.css" rel="preload" as="style">
+        <link href="/js/app.3fabfece.js" rel="preload" as="script">
         <link href="/js/chunk-vendors.2a9007c8.js" rel="preload" as="script">
-        <link href="/css/app.d18eb381.css" rel="stylesheet">
+        <link href="/css/app.c53cd8cc.css" rel="stylesheet">
     </head>
     <body>
         <div id="app"></div>
@@ -65,6 +65,6 @@ include_once($core);
         <script src="/vendor/js/bootstrap.min.js"></script>
         <script src="/vendor/js/mdb.min.js"></script>
         <script src="/js/chunk-vendors.2a9007c8.js"></script>
-        <script src="/js/app.00fbdc2e.js"></script>
+        <script src="/js/app.3fabfece.js"></script>
     </body>
 </html>
