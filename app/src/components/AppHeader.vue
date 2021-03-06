@@ -8,13 +8,10 @@
       <div class="collapse navbar-collapse" id="appNavbarTop">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-              <router-link class="nav-link theme-title" to="/">Главная</router-link>
+              <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>
           </li>
           <li class="nav-item">
               <router-link class="nav-link theme-title" to="/search">Поиск</router-link>
-          </li>
-          <li class="nav-item">
-              <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">

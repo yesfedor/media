@@ -41,6 +41,7 @@ export default {
       axios
         .get('https://iny.su/api.php?_action=media.search&v=0.1&query=' + this.query)
         .then(res => {
+          this.$router.replace('/search?request=' + this.query)
           this.code = res.data.code
           this.searchData = res.data.content
         })
@@ -48,6 +49,10 @@ export default {
   },
   mounted () {
     document.title = 'Поиск фильмов и сериалов'
+    if (this.$router.currentRoute._value.query?.request) {
+      this.query = this.$router.currentRoute._value.query?.request
+      this.search()
+    }
   }
 }
 </script>
