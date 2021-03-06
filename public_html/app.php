@@ -39,30 +39,32 @@ include_once($core);
         <meta name="msapplication-config" content="https://iny.su/web/file/favicon/main/browserconfig.xml?option=with_brain_v2">
         <meta id="header-app-theme-color" name="theme-color" content="#ffffff">
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css" rel="stylesheet">
-        <link href="/css/chunk-76d3de77.9f2699da.css" rel="prefetch">
-        <link href="/css/watch.918b136b.css" rel="prefetch">
-        <link href="/js/auth.71b7d601.js" rel="prefetch">
-        <link href="/js/chart.b420ca15.js" rel="prefetch">
-        <link href="/js/chunk-76d3de77.655bc0d7.js" rel="prefetch">
-        <link href="/js/search.9a3935b8.js" rel="prefetch">
-        <link href="/js/subscriptions.f71b9782.js" rel="prefetch">
-        <link href="/js/watch.dcba0b7c.js" rel="prefetch">
-        <link href="/css/app.a22040d9.css" rel="preload" as="style">
-        <link href="/js/app.4f980718.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.3b39aae5.js" rel="preload" as="script">
-        <link href="/css/app.a22040d9.css" rel="stylesheet">
+        <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/vendor/css/mdb.min.css">
+        <link rel="stylesheet" href="/css/dark.css">
+        <link rel="stylesheet" href="/css/themes.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/media.css">
+        <link href="/js/auth.3b40a5ec.js" rel="prefetch">
+        <link href="/js/intro.879d8cd7.js" rel="prefetch">
+        <link href="/js/playlist.29ef8a9a.js" rel="prefetch">
+        <link href="/js/search.7acca753.js" rel="prefetch">
+        <link href="/js/subscriptions.6130d604.js" rel="prefetch">
+        <link href="/js/tops.40681378.js" rel="prefetch">
+        <link href="/js/watch.6b220ac5.js" rel="prefetch">
+        <link href="/css/app.d18eb381.css" rel="preload" as="style">
+        <link href="/js/app.00fbdc2e.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.2a9007c8.js" rel="preload" as="script">
+        <link href="/css/app.d18eb381.css" rel="stylesheet">
     </head>
     <body>
-        <noscript>
-            <strong>We're sorry but dev doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-        </noscript>
         <div id="app"></div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jshashes/1.0.8/hashes.min.js"></script>
-        <script src="/js/chunk-vendors.3b39aae5.js"></script>
-        <script src="/js/app.4f980718.js"></script>
+        <script src="/vendor/js/jquery.js"></script>
+        <script src="/vendor/js/popper.min.js"></script>
+        <script src="/vendor/js/icon.js"></script>
+        <script src="/vendor/js/bootstrap.min.js"></script>
+        <script src="/vendor/js/mdb.min.js"></script>
+        <script src="/js/chunk-vendors.2a9007c8.js"></script>
+        <script src="/js/app.00fbdc2e.js"></script>
     </body>
 </html>
