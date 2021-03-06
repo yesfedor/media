@@ -122,6 +122,7 @@ export default {
         .get(`https://iny.su/api.php?_action=media.watch&v=0.1&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
         .then(res => {
           const watchData = res.data.watchData.data
+
           if (res.data.is_subscription === 'subscribe') this.is_subscription = true
           else this.is_subscription = false
           this.subscriptionCount = res.data.subscriptionCount
@@ -135,7 +136,7 @@ export default {
           this.premiereWorldCountry = watchData.premiereWorldCountry
           this.filmLength = watchData.filmLength
           this.facts = (watchData.facts.length > 0 ? watchData.facts : [])
-
+          document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
           const countries = []
           watchData.countries.map(obj => {
             countries.push(obj.country)

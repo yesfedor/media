@@ -45,6 +45,9 @@ export default {
           this.searchData = res.data.content
         })
     }
+  },
+  mounted () {
+    document.title = 'Поиск фильмов и сериалов'
   }
 }
 </script>

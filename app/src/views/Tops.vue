@@ -32,6 +32,7 @@ export default {
     }
   },
   mounted () {
+    document.title = 'Топ 10 самых просматриваемых фильмов и сериалов'
     axios
       .get('https://iny.su/api.php?_action=media.getTop10&v=0.1')
       .then(res => {

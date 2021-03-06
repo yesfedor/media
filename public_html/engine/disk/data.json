@@ -3,35 +3,95 @@
     "site-name":"SiteName",
     "site-logo":"INY",
     "routes": {
-        "main": {
+        "/": {
             "access":"default",
-            "title":"localeStr",
-            "description":"localeStr",
-            "keywords":"localeStr",
-            "ogtype":"localeStr",
-            "ogsite_name":"localeStr",
-            "ogimage":"localeStr",
+            "title":"INY Media - Онлайн кинотеатр",
+            "description":"Вы уже написали в гугле «сериал смотреть онлайн» и листаете большой перечень ресурсов, где между волнующего момента возлюбленного телесериала вам нежданно-негаданно предложат сделать ставку или узнать о волшебном средстве, которое вылечит от всех болезней. Дальше лучше не листать, вы на  верном пути: на INY Media возможно законно смотреть знаменитые телесериалы онлайн, не отрываясь на рекламу и прочую суету.",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
             "page":"main"
         },
-        "about": {
+        "/main": {
             "access":"default",
-            "title":"localeStr",
-            "description":"localeStr",
-            "keywords":"localeStr",
-            "ogtype":"localeStr",
-            "ogsite_name":"localeStr",
-            "ogimage":"localeStr",
-            "page":"about"
+            "title":"INY Media - Онлайн кинотеатр",
+            "description":"Вы уже написали в гугле «сериал смотреть онлайн» и листаете большой перечень ресурсов, где между волнующего момента возлюбленного телесериала вам нежданно-негаданно предложат сделать ставку или узнать о волшебном средстве, которое вылечит от всех болезней. Дальше лучше не листать, вы на  верном пути: на INY Media возможно законно смотреть знаменитые телесериалы онлайн, не отрываясь на рекламу и прочую суету.",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
         },
-        "info": {
+        "/search": {
             "access":"default",
-            "title":"localeStr",
+            "title":"Поиск фильмов и сериалов",
+            "description":"Поиск фильмов и сериалов",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/playlist": {
+            "access":"default",
+            "title":"Подборка на INY Media",
+            "description":"Подборка на INY Media",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/tops": {
+            "access":"default",
+            "title":"Топ 10 самых просматриваемых фильмов и сериалов",
+            "description":"Хороший сериал — на вес золота. Он способен не только развлечь занятной историей или порадовать эстетическими совершенствами, но и подкинуть дровишек в топку пытливого ума. Мы собрали несколько высокорейтинговых сериалов последних лет",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/subscriptions": {
+            "access":"default",
+            "title":"Мои подписки",
+            "description":"Хороший сериал — на вес золота. Он способен не только развлечь занятной историей или порадовать эстетическими совершенствами, но и подкинуть дровишек в топку пытливого ума. Мы собрали несколько высокорейтинговых сериалов последних лет",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/auth": {
+            "access":"default",
+            "title":"Авторизация на INY Media",
             "description":"localeStr",
-            "keywords":"localeStr",
-            "ogtype":"localeStr",
-            "ogsite_name":"localeStr",
-            "ogimage":"localeStr",
-            "page":"info"
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/watch": {
+            "access":"default",
+            "title":"Начать просмотр",
+            "description":"Фильмы и сериалы в русской озвучке на INY Media",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
+        "/welcome": {
+            "access":"default",
+            "title":"INY Media - больше возможностей, а также полное погружение в мир кинолент",
+            "description":"Хороший сериал — на вес золота. Он способен не только развлечь занятной историей или порадовать эстетическими совершенствами, но и подкинуть дровишек в топку пытливого ума.",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
         }
     }
 }

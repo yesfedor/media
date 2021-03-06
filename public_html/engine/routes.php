@@ -1,5 +1,5 @@
 <?php
-$url_page = $_GET['page'];
+$url_page = $_SERVER['REQUEST_URI'];
 if (!$url_page) $url_page = 'main';
 
 function appRoute($pageData) {
@@ -34,9 +34,9 @@ function appRoute($pageData) {
         $access = $pageData['access'];
         if ($access == 'default' or $access == $_SESSION['access']) {
             $p = [
-                'title' => $locale[$pageData['title']],
-                'description' => $locale[$pageData['description']],
-                'keywords' => $locale[$pageData['keywords']],
+                'title' => ($locale[$pageData['title']] ? $locale[$pageData['title']] : $pageData['title']),
+                'description' => ($locale[$pageData['description']] ? $locale[$pageData['description']] : $pageData['description']),
+                'keywords' => ($locale[$pageData['keywords']] ? $locale[$pageData['keywords']] : $$pageData['keywords']),
                 'ogtype' => $pageData['ogtype'],
                 'ogsite_name' => $data['site-name'],
                 'ogimage' => $pageData['ogimage'],

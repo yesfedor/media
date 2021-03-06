@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted () {
-
+    document.title = 'INY Media - Онлайн кинотеатр'
   }
 }
 </script>

@@ -32,6 +32,7 @@ export default {
     }
   },
   mounted () {
+    document.title = 'Мои подписки'
     if (this.$store.getters.IS_AUTH) {
       axios
         .get('https://iny.su/api.php?_action=media.getSubscribe&v=0.1&jwt=' + this.$store.getters.JWT)

@@ -17,7 +17,7 @@ export default {
     }
   },
   mounted () {
-
+    document.title = 'INY Media - больше возможностей, а также полное погружение в мир кинолент'
   }
 }
 </script>

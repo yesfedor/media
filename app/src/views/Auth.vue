@@ -62,6 +62,7 @@ export default {
     }
   },
   mounted () {
+    document.title = 'Авторизация на INY Media'
     this.status = this.$store.getters.IS_AUTH
     this.user = this.$store.getters.USER
   },

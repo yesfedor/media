@@ -39,6 +39,7 @@ export default {
     }
   },
   mounted () {
+    document.title = 'Подборка на INY Media'
     axios
       .get('https://iny.su/api.php?_action=media.playlist&v=0.1&act=get&alias=' + this.alias)
       .then(res => {

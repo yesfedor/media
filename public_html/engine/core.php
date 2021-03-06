@@ -40,8 +40,8 @@ function isJSON( $data = null ) {
 	if( ! empty( $data ) ) {
 		$tmp = json_decode( $data );
 		return (
-				json_last_error() === JSON_ERROR_NONE
-				&& ( is_object( $tmp ) || is_array( $tmp ) )
+            json_last_error() === JSON_ERROR_NONE
+            && ( is_object( $tmp ) || is_array( $tmp ) )
 		);
 	}
 	return false;
