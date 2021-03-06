@@ -63,7 +63,6 @@ export default {
     },
     getBgImage () {
       let firstKpid = 0
-      console.log(this.playlistData.length)
       if (this.playlistData.length >= 4) firstKpid = this.playlistData[this.playlistData.length - 1]?.filmId
       else firstKpid = this.playlistData[0]?.filmId
       return `url(https://kinopoiskapiunofficial.tech/images/posters/kp/${firstKpid}.jpg)`

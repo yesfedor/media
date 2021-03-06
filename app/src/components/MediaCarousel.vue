@@ -1,26 +1,20 @@
 <template>
-  <!--Carousel Wrapper-->
-  <div id="media-carousel-1" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
+  <div id="media-carousel-1" class="carousel slide z-depth-0 animated fadeIn" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li v-for="(value, key) in mediaData" :key="key" data-target="#media-carousel-1" :data-slide-to="key" :class="(key === 0 ? 'active' : '')"></li>
+      <li v-for="(value, key, index) in mediaData" :key="key" data-target="#media-carousel-1" :data-slide-to="index" :class="(index === 0 ? 'active' : '')"></li>
     </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div v-for="(value, key) in mediaData" :key="key" class="carousel-inner" role="listbox">
-      <div class="carousel-item h87vhn" :class="(key === 0 ? 'active' : '')">
+    <div class="carousel-inner mt-n5" role="listbox">
+      <div v-for="(value, key, index) in mediaData" :key="key" class="carousel-item h87vhn" :class="(index === 0 ? 'active' : '')">
         <div class="view">
-          <img class="d-block w-100" :src="{{value.img_src}}" loading="lazy" alt="Gallery Item">
+          <img class="d-block w-100" :src="value.img_src" alt="Gallery Item">
           <div class="mask carousel-mask"></div>
         </div>
         <div @click="go(key)" class="carousel-caption cursor-pointer">
-          <h3 class="h3-responsive">{{value.title}}</h3>
+          <h3 class="h2-responsive">{{value.title}}</h3>
           <p class="white-text">Смотреть</p>
         </div>
       </div>
     </div>
-    <!--/.Slides-->
-    <!--Controls-->
     <a class="carousel-control-prev" href="#media-carousel-1" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Предыдущий</span>
@@ -29,9 +23,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Следующий</span>
     </a>
-    <!--/.Controls-->
   </div>
-  <!--/.Carousel Wrapper-->
 </template>
 
 <script>
@@ -60,8 +52,8 @@ export default {
           title: 'Воспитанные волками',
           img_src: 'https://go.iny.su/uc/cc4ca42/v6f7584/061c60f5/0b387a36eb5.jpg'
         },
-        1231016: {
-          title: '716587',
+        716587: {
+          title: 'Острые козырьки',
           img_src: 'https://go.iny.su/uc/cc4ca42/v6f7584/51506a19/dc162113bd0.jpg'
         }
       }
