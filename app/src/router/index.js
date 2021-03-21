@@ -7,7 +7,8 @@ const routes = [
     path: '/',
     name: 'Main',
     component: Main,
-    alias: '/main'
+    alias: '/main',
+    props: route => ({ auth: (route.query.auth ? route.query.auth : ''), _origin: (route.query._origin ? route.query._origin : '') })
   },
   {
     path: '/search',

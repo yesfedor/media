@@ -50,6 +50,9 @@ export default createStore({
           const user = res.data
           if (user.auth === true) context.commit('LOGIN', user.jwt)
         })
+    },
+    REGISTER: (context, payload) => {
+      axios.get(`https://iny.su/api.php?_action=auth.jwt&v=0.1&login=${payload.login}&password=${payload.password}`)
     }
   },
   modules: {

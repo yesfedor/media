@@ -24,6 +24,10 @@ import MediaPlaylist from '../components/MediaPlaylist'
 */
 export default {
   name: 'Main',
+  props: {
+    auth: String,
+    _origin: String
+  },
   components: {
     MediaCarousel,
     MediaPlaylist
@@ -34,6 +38,11 @@ export default {
     }
   },
   mounted () {
+    if (this.auth !== '' && this._origin === 'iny.su') {
+      this.$store.commit('LOGIN', this.auth)
+      this.$router.push('/')
+    }
+
     document.title = 'INY Media - Онлайн кинотеатр'
   }
 }

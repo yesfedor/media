@@ -45,16 +45,16 @@ include_once($core);
         <link rel="stylesheet" href="/css/themes.css">
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/media.css">
-        <link href="/js/auth.8c6d438d.js" rel="prefetch">
+        <link href="/js/auth.e605d1c0.js" rel="prefetch">
         <link href="/js/intro.ddf0e348.js" rel="prefetch">
         <link href="/js/playlist.09976427.js" rel="prefetch">
         <link href="/js/search.6ea3d4bd.js" rel="prefetch">
         <link href="/js/subscriptions.9185552e.js" rel="prefetch">
         <link href="/js/tops.e4e6e737.js" rel="prefetch">
-        <link href="/js/watch.20d1d18c.js" rel="prefetch">
+        <link href="/js/watch.af12c113.js" rel="prefetch">
         <link href="/css/app.c53cd8cc.css" rel="preload" as="style">
-        <link href="/js/app.3fabfece.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.2a9007c8.js" rel="preload" as="script">
+        <link href="/js/app.5aea8d37.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.a9486f64.js" rel="preload" as="script">
         <link href="/css/app.c53cd8cc.css" rel="stylesheet">
     </head>
     <body>
@@ -64,7 +64,7 @@ include_once($core);
         <script src="/vendor/js/icon.js"></script>
         <script src="/vendor/js/bootstrap.min.js"></script>
         <script src="/vendor/js/mdb.min.js"></script>
-        <script src="/js/chunk-vendors.2a9007c8.js"></script>
-        <script src="/js/app.3fabfece.js"></script>
+        <script src="/js/chunk-vendors.a9486f64.js"></script>
+        <script src="/js/app.5aea8d37.js"></script>
     </body>
 </html>

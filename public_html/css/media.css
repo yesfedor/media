@@ -1,0 +1,54 @@
+.card-border {
+    border-color: white!important;
+}
+.card-poster {
+    /* height: 70vh; */
+    filter: grayscale(1);
+    background-color: #242424;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    transition: background-color, filter;
+    transition-duration: 0.5s;
+}
+.card-poster:hover {
+    filter: grayscale(0);
+    background-color: #00000088;
+}
+
+.card-poster_view-default, card-poster_view-max-content {
+    /*height: 60vh;*/
+    height: auto;
+}
+
+.bg-poster-image {
+    width: 100vw;
+    height: 150vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.3) blur(6px);
+    transition-duration: 1s;
+}
+.bg-poster-image:after {
+    content: '';
+    width: 100vw;
+    height: 150vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #505050 94%)!important;
+}
+.border-white {
+    border-color: white!important;
+}

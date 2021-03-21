@@ -56,9 +56,9 @@
                     <span class="theme-link">#{{idx + 1}}</span> {{content}}
                   </h5>
                 </template>
-                <h5 v-else class="d-block theme-text text-center px-3 mb-3">
-                  Факты еще не подобраны
-                </h5>
+                <div v-else class="col-12">
+                  <h5 class="d-block theme-text text-center px-3 mb-3">Факты еще не подобраны</h5>
+                </div>
               </div>
             </div>
           </div>
@@ -130,7 +130,9 @@ export default {
           if (watchData.type === 'TV_SHOW') this.type = 'сериал'
           this.nameRu = watchData.nameRu
           this.ratingAgeLimits = (watchData.ratingAgeLimits ? watchData.ratingAgeLimits : '16+')
-          this.slogan = watchData.slogan
+
+          if (watchData.slogan) this.slogan = watchData.slogan
+          else this.slogan = '-'
           this.year = watchData.year
           this.description = watchData.description
           this.premiereWorldCountry = watchData.premiereWorldCountry
