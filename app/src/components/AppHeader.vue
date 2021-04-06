@@ -8,18 +8,18 @@
       <div class="collapse navbar-collapse" id="appNavbarTop">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-              <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>
+            <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>
           </li>
           <li class="nav-item">
-              <router-link class="nav-link theme-title" to="/search">Поиск</router-link>
+            <router-link class="nav-link theme-title" to="/search">Поиск</router-link>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li v-if="auth" class="nav-item">
-              <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
+            <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
           </li>
           <li class="nav-item">
-              <router-link class="nav-link theme-title" to="/auth">Аккаунт</router-link>
+            <router-link class="nav-link theme-title" to="/auth">Аккаунт</router-link>
           </li>
         </ul>
       </div>

@@ -26,6 +26,7 @@ export default createStore({
     LOGIN: (state, jwt) => {
       const user = JSON.parse(atob(jwt.split('.')[1]))
       state.user.auth = true
+      state.user.uid = user.uid
       state.user.name = user.name
       state.user.surname = user.surname
       state.user.jwt = jwt

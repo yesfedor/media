@@ -16,6 +16,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
   },
   {
+    path: '/playlist/dashboard',
+    name: 'PlaylistDashboard',
+    component: () => import(/* webpackChunkName: "playlist" */ '../views/PlaylistDashboard.vue'),
+    props: true
+  },
+  {
     path: '/playlist/:alias',
     name: 'Playlist',
     component: () => import(/* webpackChunkName: "playlist" */ '../views/Playlist.vue'),
@@ -56,17 +62,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
-  scrollBehavior () {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({
-          selector: 'top',
-          behavior: 'smooth'
-        })
-      }, 500)
-    })
-  }
+  routes
 })
 
 export default router

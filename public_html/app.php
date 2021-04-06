@@ -45,17 +45,34 @@ include_once($core);
         <link rel="stylesheet" href="/css/themes.css">
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/media.css">
+        <link href="/css/watch.791e057d.css" rel="prefetch">
         <link href="/js/auth.e605d1c0.js" rel="prefetch">
         <link href="/js/intro.ddf0e348.js" rel="prefetch">
         <link href="/js/playlist.09976427.js" rel="prefetch">
         <link href="/js/search.6ea3d4bd.js" rel="prefetch">
         <link href="/js/subscriptions.9185552e.js" rel="prefetch">
         <link href="/js/tops.e4e6e737.js" rel="prefetch">
-        <link href="/js/watch.af12c113.js" rel="prefetch">
+        <link href="/js/watch.34a3eaeb.js" rel="prefetch">
         <link href="/css/app.c53cd8cc.css" rel="preload" as="style">
-        <link href="/js/app.5aea8d37.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.a9486f64.js" rel="preload" as="script">
+        <link href="/js/app.77a7b998.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.013adad2.js" rel="preload" as="script">
         <link href="/css/app.c53cd8cc.css" rel="stylesheet">
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(68637091, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+        });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/68637091" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     </head>
     <body>
         <div id="app"></div>
@@ -64,7 +81,8 @@ include_once($core);
         <script src="/vendor/js/icon.js"></script>
         <script src="/vendor/js/bootstrap.min.js"></script>
         <script src="/vendor/js/mdb.min.js"></script>
-        <script src="/js/chunk-vendors.a9486f64.js"></script>
-        <script src="/js/app.5aea8d37.js"></script>
+        <script src="https://vk.com/js/api/openapi.js?168"></script>
+        <script src="/js/chunk-vendors.013adad2.js"></script>
+        <script src="/js/app.77a7b998.js"></script>
     </body>
 </html>
