@@ -3,7 +3,7 @@
     <ol class="carousel-indicators">
       <li v-for="(value, key, index) in mediaData" :key="key" data-target="#media-carousel-1" :data-slide-to="index" :class="(index === 0 ? 'active' : '')"></li>
     </ol>
-    <div class="carousel-inner mt-n5" role="listbox">
+    <div class="carousel-inner gallery-top" role="listbox">
       <div v-for="(value, key, index) in mediaData" :key="key" class="carousel-item h87vhn" :class="(index === 0 ? 'active' : '')">
         <div class="view">
           <img class="d-block w-100" :src="value.img_src" alt="Gallery Item">
@@ -68,10 +68,13 @@ export default {
 </script>
 
 <style>
-  .h87vhn {
-      max-height: 87vh;
-  }
-  .carousel-mask {
-      background-color: rgb(24, 24, 24, 0.6) !important;
-  }
+.h87vhn {
+  max-height: 87vh;
+}
+.carousel-mask {
+  background-color: rgb(24, 24, 24, 0.6) !important;
+}
+.gallery-top {
+  margin-top: -3.6rem!important;
+}
 </style>
