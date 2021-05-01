@@ -1,6 +1,6 @@
 <template>
-  <div class="d-none d-lg-block bg-poster-image animated fadeIn" :style="{'background-image':getBgImage()}"></div>
   <div class="container-fluid">
+    <div class="d-none d-lg-block bg-poster-image" :style="{'background-image':getBgImage()}"></div>
     <div class="row py-3">
       <div class="col-12 col-md-10 offset-md-1">
         <div class="row">

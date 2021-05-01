@@ -3,7 +3,7 @@
     <div class="row mt-3">
       <div class="col-12 col-md-10 offset-md-1">
         <!-- Wrapper -->
-        <div class="row my-3 animated fadeInDown">
+        <div class="row my-3">
           <div class="col-12 col-md-3">
             <div class="row">
               <!-- Image -->

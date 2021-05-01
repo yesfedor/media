@@ -1,6 +1,10 @@
 <template>
   <AppHeader :logo="logo" />
-  <router-view class="router-view-height"></router-view>
+  <router-view v-slot="{ Component }" class="router-view-height">
+    <transition name="router-view" mode="out-in" enter-to-class="animate__animated animate__fadeIn" leave-active-class="animate__animated animate__fadeOut">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <AppFooter :logo="logo" />
 </template>
 
@@ -38,6 +42,7 @@ export default {
 
 <style>
 .router-view-height {
-  min-height: 88.4vh !important;
+  min-height: 100vh !important;
+  /* min-height: 88.4vh !important; */
 }
 </style>

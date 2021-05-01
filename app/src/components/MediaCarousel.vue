@@ -1,5 +1,5 @@
 <template>
-  <div id="media-carousel-1" class="carousel slide z-depth-0 animated fadeIn" data-ride="carousel">
+  <div id="media-carousel-1" class="carousel slide z-depth-0" data-ride="carousel">
     <ol class="carousel-indicators">
       <li v-for="(value, key, index) in mediaData" :key="key" data-target="#media-carousel-1" :data-slide-to="index" :class="(index === 0 ? 'active' : '')"></li>
     </ol>
