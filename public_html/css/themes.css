@@ -79,6 +79,11 @@ html, body {
     transition-duration: var(--theme-duration-change)!important;
     background-color: var(--theme-panel)!important;
 }
+.theme-panel-blur {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #aaa;
+}
 .theme-panel-dark {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change)!important;
@@ -171,4 +176,12 @@ hr {
 }
 .border-white {
     border-color: var(--theme-white)!important;
+}
+
+/* Placeholder color */
+.placeholder-title::placeholder {
+    color: var(--theme-title);
+}
+.placeholder-text::placeholder {
+    color: var(--theme-text);
 }

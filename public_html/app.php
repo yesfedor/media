@@ -39,24 +39,23 @@ include_once($core);
         <meta name="msapplication-config" content="https://iny.su/web/file/favicon/main/browserconfig.xml?option=with_brain_v2">
         <meta id="header-app-theme-color" name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/vendor/css/mdb.min.css">
-        <link rel="stylesheet" href="/css/dark.css">
-        <link rel="stylesheet" href="/css/themes.css">
-        <link rel="stylesheet" href="/css/common.css">
-        <link rel="stylesheet" href="/css/media.css">
-        <link href="/css/watch.791e057d.css" rel="prefetch">
-        <link href="/js/auth.e605d1c0.js" rel="prefetch">
-        <link href="/js/intro.ddf0e348.js" rel="prefetch">
-        <link href="/js/playlist.09976427.js" rel="prefetch">
-        <link href="/js/search.6ea3d4bd.js" rel="prefetch">
-        <link href="/js/subscriptions.9185552e.js" rel="prefetch">
-        <link href="/js/tops.e4e6e737.js" rel="prefetch">
-        <link href="/js/watch.34a3eaeb.js" rel="prefetch">
-        <link href="/css/app.c53cd8cc.css" rel="preload" as="style">
-        <link href="/js/app.77a7b998.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.013adad2.js" rel="preload" as="script">
-        <link href="/css/app.c53cd8cc.css" rel="stylesheet">
+        <link rel="stylesheet" href="/vendor/css/bootstrap.min.css?version=1">
+        <link rel="stylesheet" href="/vendor/css/mdb.min.css?version=1">
+        <link rel="stylesheet" href="/css/dark.css?version=1">
+        <link rel="stylesheet" href="/css/themes.css?version=1">
+        <link rel="stylesheet" href="/css/common.css?version=1">
+        <link rel="stylesheet" href="/css/media.css?version=1">
+        <link href="/js/auth.95653d5b.js" rel="prefetch">
+        <link href="/js/intro.16d03150.js" rel="prefetch">
+        <link href="/js/playlist.e6763614.js" rel="prefetch">
+        <link href="/js/search.79bfc2ee.js" rel="prefetch">
+        <link href="/js/subscriptions.8f569c73.js" rel="prefetch">
+        <link href="/js/tops.87f20b68.js" rel="prefetch">
+        <link href="/js/watch.b1ea11d9.js" rel="prefetch">
+        <link href="/css/app.618b0ad1.css" rel="preload" as="style">
+        <link href="/js/app.050177c8.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.30402a6b.js" rel="preload" as="script">
+        <link href="/css/app.618b0ad1.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
@@ -76,13 +75,12 @@ include_once($core);
     </head>
     <body>
         <div id="app"></div>
-        <script src="/vendor/js/jquery.js"></script>
-        <script src="/vendor/js/popper.min.js"></script>
-        <script src="/vendor/js/icon.js"></script>
-        <script src="/vendor/js/bootstrap.min.js"></script>
-        <script src="/vendor/js/mdb.min.js"></script>
-        <script src="https://vk.com/js/api/openapi.js?168"></script>
-        <script src="/js/chunk-vendors.013adad2.js"></script>
-        <script src="/js/app.77a7b998.js"></script>
+        <script src="/vendor/js/jquery.js?version=1"></script>
+        <script src="/vendor/js/popper.min.js?version=1"></script>
+        <script src="/vendor/js/icon.js?version=1"></script>
+        <script src="/vendor/js/bootstrap.min.js?version=1"></script>
+        <script src="/vendor/js/mdb.min.js?version=1"></script>
+        <script src="/js/chunk-vendors.30402a6b.js"></script>
+        <script src="/js/app.050177c8.js"></script>
     </body>
 </html>
