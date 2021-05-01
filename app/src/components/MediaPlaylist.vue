@@ -13,7 +13,7 @@
     </div>
   </div>
   <div v-else class="col-12">
-    <div class="row mb-3">
+    <div class="row">
       <div @click="go()" class="col-12 mb-3 col-md-6 col-lg-4 col-xl-3 embed-responsive embed-responsive-16by9">
         <div class="row justify-content-center align-items-center card-poster theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded" :style="{'background-image':getBgImage()}">
           <div class="col-12 text-center">

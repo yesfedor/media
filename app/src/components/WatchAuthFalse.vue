@@ -10,11 +10,6 @@
               <div class="col-12">
                 <img itemprop="image" :src="'https://kinopoiskapiunofficial.tech/images/posters/kp/' + kpid + '.jpg'" alt="thumbnail" class="img-thumbnail" style="width: 100%"/>
               </div>
-              <div class="col-12 my-3">
-                <div class="row justify-content-center align-items-center">
-                  <div id="vk_groups"></div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="col-12 col-md-9">
@@ -118,7 +113,6 @@ export default {
           this.nameRu = watchData.nameRu
           if (watchData.type === 'FILM') this.type = 'фильм'
           if (watchData.type === 'TV_SHOW') this.type = 'сериал'
-          document.title = `Авторизуйтесь для просмотра ${this.type} ${this.nameRu}`
           if (watchData.slogan) this.slogan = watchData.slogan
           else this.slogan = '-'
           this.year = watchData.year
@@ -137,10 +131,6 @@ export default {
             genres.push(obj.genre)
           })
           this.genres = genres.join(', ')
-          setTimeout(() => {
-            // eslint-disable-next-line
-            VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, height: "400"}, 156668955)
-          }, 500)
         })
     }
   },

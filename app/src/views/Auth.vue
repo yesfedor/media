@@ -8,7 +8,7 @@
         </div>
       </div>
       <div v-else class="row justify-content-center align-items-center">
-        <div class="col-12 col-lg-7 text-center theme-panel-neumorphic">
+        <div class="col-12 col-lg-7 text-center theme-panel rounded">
           <h1 class="my-0 py-3">Привет, {{user.name}} {{user.surname}}</h1>
           <router-link to="/playlist/dashboard" class="btn btn-outline-white btn-rounded my-3">Плейлисты</router-link>
           <button class="btn btn-outline-white btn-rounded my-3" @click="logout()">Выйти</button>
@@ -57,11 +57,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.theme-panel-neumorphic {
-  background: linear-gradient(145deg, #1B1B1B, #151515);
-  border-radius: 1rem!important;
-  box-shadow: 5.71px 5.71px 1px #121212, -5.71px -5.71px 1px #1E1E1E;
-}
-</style>

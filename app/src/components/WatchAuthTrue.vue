@@ -6,8 +6,16 @@
         <div class="row">
           <div class="col-12 col-xl-9 mt-3">
             <div class="row">
+              <div class="col-12 text-center text-md-left px-md-0">
+                <h4 class="theme-title w-100">
+                  Плеер:
+                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'svetacdn' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='svetacdn'">Svetacdn</a>
+                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'allohalive' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='allohalive'">Allohalive</a>
+                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'bazon' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='bazon'">Bazon</a>
+                </h4>
+              </div>
               <div class="col-12 embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" :src="getSrc()" frameborder="0" scrolling="no" allowfullscreen="" referrerpolicy="origin"></iframe>
+                <iframe class="embed-responsive-item" :src="getSrc(currentPlayer)" frameborder="0" scrolling="no" allowfullscreen="" referrerpolicy="origin"></iframe>
               </div>
               <div class="col-12 px-3 px-md-0">
                 <h4 class="w-75 text-left theme-title text-capitalize mt-3 mb-0 float-left">{{type}} {{nameRu}}</h4>
@@ -78,24 +86,6 @@
     </div>
   </div>
   </div>
-  <div class="modal fade" id="modalStaffByKpid" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Content Modal
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -112,6 +102,7 @@ export default {
   },
   data () {
     return {
+      currentPlayer: '',
       auth: undefined,
       type: '',
       nameRu: '',
@@ -132,6 +123,9 @@ export default {
   mounted () {
     this.auth = this.$store.getters.IS_AUTH
     if (!this.auth) this.$router.push('/')
+    const currentPlayer = localStorage.getItem('currentPlayer')
+    if (currentPlayer) this.currentPlayer = currentPlayer
+    else this.currentPlayer = 'svetacdn'
     this.render()
     this.getRecoms()
   },
@@ -157,7 +151,8 @@ export default {
           this.premiereWorldCountry = watchData.premiereWorldCountry
           this.filmLength = watchData.filmLength
           this.facts = (watchData.facts.length > 0 ? watchData.facts : [])
-          document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
+          if (this.auth) document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
+          if (!this.auth) document.title = `Авторизуйтесь для просмотра ${this.type} ${this.nameRu}`
           const countries = []
           watchData.countries.map(obj => {
             countries.push(obj.country)
@@ -189,8 +184,18 @@ export default {
       }
       axios.get(`https://iny.su/api.php?_action=media.subscription&v=0.1&act=${act}&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
     },
-    getSrc () {
-      return `https://dud.allohalive.com/?kp=${this.kpid}&token=10b16a40f5793e2d02d06265c13912`
+    getSrc (player = 'svetacdn') {
+      switch (player) {
+        case 'svetacdn':
+          localStorage.setItem('currentPlayer', 'svetacdn')
+          return `//7043.svetacdn.in/LDSZJq4uCNvY?kp_id=${this.kpid}`
+        case 'allohalive':
+          localStorage.setItem('currentPlayer', 'allohalive')
+          return `https://dud.allohalive.com/?kp=${this.kpid}`
+        case 'bazon':
+          localStorage.setItem('currentPlayer', 'bazon')
+          return `https://v1619875985.bazon.site/kp/${this.kpid}`
+      }
     },
     getBgImage () {
       return `url(https://kinopoiskapiunofficial.tech/images/posters/kp/${this.kpid}.jpg)`
@@ -212,9 +217,3 @@ export default {
   }
 }
 </script>
-
-<style>
-html, body {
-  overflow-x: hidden;
-}
-</style>
