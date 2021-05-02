@@ -6,7 +6,7 @@
       </div>
       <div class="col-12 col-md-6 col-lg-4 md-form md-outline px-0">
         <input v-model="query" @change="search()" @keypress.enter="search()" type="search" id="searchinput" class="form-control theme-panel theme-title">
-        <label class="active theme-panel mx-2" for="searchinput">Начните искать</label>
+        <label class="active theme-panel theme-title mx-2" for="searchinput">Начните искать</label>
       </div>
     </div>
     <div v-if="code == 200" class="row justify-content-center">
@@ -14,7 +14,7 @@
     </div>
     <div v-else class="row justify-content-center">
       <div class="col-12 col-md-6 col-lg-4 text-center border border-white theme-panel rounded z-depth-3 py-4">
-        <h4 class="my-2">Ничего не нашлось</h4>
+        <h4 class="theme-title my-2">Ничего не нашлось</h4>
       </div>
     </div>
   </div>

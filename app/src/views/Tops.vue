@@ -2,7 +2,7 @@
   <div class="container-fluid pt-5">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="mb-3 py-3">В тренде</h1>
+        <h1 class="theme-title mb-3 py-3">В тренде</h1>
       </div>
     </div>
     <div v-if="topsData.length > 0" class="row justify-content-center">

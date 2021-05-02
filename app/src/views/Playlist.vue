@@ -3,7 +3,7 @@
     <template v-if="playlistData.length > 0">
       <div class="row">
         <div class="col-12 col-lg-4 offset-lg-4 theme-panel z-depth-1 text-center mb-5 rounded px-0">
-          <h1 class="h1-responsive mb-3 py-3 px-2 px-lg-3">{{title}}</h1>
+          <h1 class="h1-responsive theme-title mb-3 py-3 px-2 px-lg-3">{{title}}</h1>
           <hr class="w-100">
           <h5 v-if="description" class="h5-responsive theme-text mb-3 py-3 px-2 px-lg-3">{{description}}</h5>
         </div>

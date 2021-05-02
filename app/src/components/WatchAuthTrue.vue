@@ -75,7 +75,7 @@
         <div class="col-12 col-xl-3">
           <div class="row px-0 pl-xl-5 ">
             <div class="col-12 text-center mb-3">
-              <h4 class="my-0 py-3">Рекомендации</h4>
+              <h4 class="theme-title my-0 py-3">Рекомендации</h4>
             </div>
           </div>
           <div class="row px-0 pl-xl-5">
