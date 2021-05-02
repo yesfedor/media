@@ -53,10 +53,10 @@ include_once($core);
         <link href="/js/subscriptions.e38709bc.js" rel="prefetch">
         <link href="/js/tops.06d7936a.js" rel="prefetch">
         <link href="/js/watch.beed5229.js" rel="prefetch">
-        <link href="/css/app.186652ab.css" rel="preload" as="style">
-        <link href="/js/app.141177d5.js" rel="preload" as="script">
+        <link href="/css/app.10d781db.css" rel="preload" as="style">
+        <link href="/js/app.7e716973.js" rel="preload" as="script">
         <link href="/js/chunk-vendors.fa54a9e7.js" rel="preload" as="script">
-        <link href="/css/app.186652ab.css" rel="stylesheet">
+        <link href="/css/app.10d781db.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
@@ -82,6 +82,6 @@ include_once($core);
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
         <script src="/js/chunk-vendors.fa54a9e7.js"></script>
-        <script src="/js/app.141177d5.js"></script>
+        <script src="/js/app.7e716973.js"></script>
     </body>
 </html>
