@@ -42,21 +42,21 @@ include_once($core);
 
         <link rel="stylesheet" href="/vendor/css/bootstrap.min.css?version=1">
         <link rel="stylesheet" href="/vendor/css/mdb.min.css?version=1">
-        <link rel="stylesheet" href="/css/dark.css?version=1">
-        <link rel="stylesheet" href="/css/themes.css?version=1">
-        <link rel="stylesheet" href="/css/common.css?version=1">
-        <link rel="stylesheet" href="/css/media.css?version=1">
+        <link rel="stylesheet" href="/css/dark.css?version=2">
+        <link rel="stylesheet" href="/css/themes.css?version=3">
+        <link rel="stylesheet" href="/css/common.css?version=2">
+        <link rel="stylesheet" href="/css/media.css?version=2">
         <link href="/js/auth.95653d5b.js" rel="prefetch">
         <link href="/js/intro.16d03150.js" rel="prefetch">
-        <link href="/js/playlist.e6763614.js" rel="prefetch">
-        <link href="/js/search.79bfc2ee.js" rel="prefetch">
-        <link href="/js/subscriptions.8f569c73.js" rel="prefetch">
-        <link href="/js/tops.87f20b68.js" rel="prefetch">
-        <link href="/js/watch.b1ea11d9.js" rel="prefetch">
-        <link href="/css/app.618b0ad1.css" rel="preload" as="style">
-        <link href="/js/app.050177c8.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.30402a6b.js" rel="preload" as="script">
-        <link href="/css/app.618b0ad1.css" rel="stylesheet">
+        <link href="/js/playlist.5be9ee59.js" rel="prefetch">
+        <link href="/js/search.57c1149c.js" rel="prefetch">
+        <link href="/js/subscriptions.e38709bc.js" rel="prefetch">
+        <link href="/js/tops.06d7936a.js" rel="prefetch">
+        <link href="/js/watch.beed5229.js" rel="prefetch">
+        <link href="/css/app.186652ab.css" rel="preload" as="style">
+        <link href="/js/app.141177d5.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.fa54a9e7.js" rel="preload" as="script">
+        <link href="/css/app.186652ab.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
@@ -81,7 +81,7 @@ include_once($core);
         <script src="/vendor/js/icon.js?version=1"></script>
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
-        <script src="/js/chunk-vendors.30402a6b.js"></script>
-        <script src="/js/app.050177c8.js"></script>
+        <script src="/js/chunk-vendors.fa54a9e7.js"></script>
+        <script src="/js/app.141177d5.js"></script>
     </body>
 </html>

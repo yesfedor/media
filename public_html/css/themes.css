@@ -82,7 +82,14 @@ html, body {
 .theme-panel-blur {
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
+    background-color: #00000000;
+    transition-property: -webkit-backdrop-filter, backdrop-filter, background-color;
+    transition-duration: var(--theme-duration-change)!important;
+}
+.theme-border-bottom-header {
     border-bottom: 1px solid #aaa;
+    transition-property:border-bottom;
+    transition-duration: var(--theme-duration-change)!important;
 }
 .theme-panel-dark {
     transition-property: background-color, color, border-color;

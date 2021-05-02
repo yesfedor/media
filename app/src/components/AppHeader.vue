@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top theme-header theme-panel-blur z-depth-0">
+  <nav class="navbar navbar-expand-lg sticky-top theme-header z-depth-0" :class="(position[1] === 0 ? '':'theme-panel-blur theme-border-bottom-header')">
     <div class="container">
       <router-link class="navbar-brand theme-title" to="/">{{logo}}</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appNavbarTop" aria-controls="appNavbarTop" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,11 +31,14 @@
 </template>
 
 <script>
+import windowScrollPosition from '../mixins/window-scroll-position'
+
 export default {
   name: 'AppHeader',
   props: {
     logo: String
   },
+  mixins: [windowScrollPosition('position')],
   data () {
     return {
       AppNavbarSearch: '',
