@@ -1,7 +1,7 @@
 <template>
   <AppHeader :logo="logo" />
   <router-view v-slot="{ Component }" class="router-view-height">
-    <transition name="router-view" mode="out-in" enter-to-class="animated fadeIn" leave-active-class="animated fadeOut">
+    <transition name="router-view" :duration="{ enter: 600, leave: 600 }" mode="out-in" enter-to-class="animated fadeIn" leave-active-class="animated fadeOut">
       <component :is="Component" />
     </transition>
   </router-view>
@@ -20,7 +20,6 @@ export default {
   },
   data () {
     return {
-      asd: 'AppFooter',
       logo: 'INY Media'
     }
   },

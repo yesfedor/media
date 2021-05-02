@@ -120,6 +120,7 @@ export default {
           this.premiereWorldCountry = watchData.premiereWorldCountry
           this.filmLength = watchData.filmLength
           this.facts = (watchData.facts.length > 0 ? watchData.facts : [])
+          document.title = `Авторизуйтесь для просмотра ${this.type} ${this.nameRu}`
           const countries = []
           watchData.countries.map(obj => {
             countries.push(obj.country)
@@ -136,6 +137,7 @@ export default {
   },
   mounted () {
     this.load()
+    console.log(this.auth)
   }
 }
 </script>

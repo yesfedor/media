@@ -55,7 +55,9 @@ export default {
   },
   methods: {
     goToSearch () {
-      this.$router.push(`/search?request=${this.AppNavbarSearch}`)
+      const searchUrl = `/search?request=${this.AppNavbarSearch}`
+      if (this.$route.name === 'Watch') window.open(searchUrl, 'blank')
+      else this.$router.push(searchUrl)
       this.AppNavbarSearch = ''
     }
   },

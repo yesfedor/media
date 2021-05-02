@@ -1,6 +1,5 @@
 <template>
-  <WatchAuthFalse v-if="!auth" :kpid="kpid" />
-  <WatchAuthTrue v-else :kpid="kpid" />
+  <component :kpid="kpid" :is="get_component"></component>
 </template>
 
 <script>
@@ -18,13 +17,17 @@ export default {
   },
   data () {
     return {
-      auth: undefined
+      auth: false
     }
   },
   mounted () {
     this.auth = this.$store.getters.IS_AUTH
   },
   computed: {
+    get_component () {
+      if (this.auth) return 'WatchAuthTrue'
+      else return 'WatchAuthFalse'
+    },
     get_auth () {
       return this.$store.getters.IS_AUTH
     }

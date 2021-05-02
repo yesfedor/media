@@ -9,6 +9,7 @@ include_once($core);
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="yandex-verification" content="4516b047d1a2799c" />
         <!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]-->
         <!-- Standart tag -->
         <title><?= $p['title'] ?></title>

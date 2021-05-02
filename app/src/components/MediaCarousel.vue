@@ -4,13 +4,13 @@
       <li v-for="(value, key, index) in mediaData" :key="key" data-target="#media-carousel-1" :data-slide-to="index" :class="(index === 0 ? 'active' : '')"></li>
     </ol>
     <div class="carousel-inner gallery-top" role="listbox">
-      <div v-for="(value, key, index) in mediaData" :key="key" class="carousel-item h87vhn" :class="(index === 0 ? 'active' : '')">
+      <div v-for="(value, key, index) in mediaData" :key="key" class="carousel-item carousel-view-height" :class="(index === 0 ? 'active' : '')">
         <div class="view">
-          <img class="d-block w-100" :src="value.img_src" alt="Gallery Item">
+          <img class="carousel-img-responsive" :src="value.img_src" alt="Gallery Item">
           <div class="mask carousel-mask"></div>
         </div>
         <div @click="go(key)" class="carousel-caption cursor-pointer">
-          <h3 class="h2-responsive">{{value.title}}</h3>
+          <h3 class="h2-responsive theme-title">{{value.title}}</h3>
           <p class="white-text">Смотреть</p>
         </div>
       </div>
@@ -68,8 +68,16 @@ export default {
 </script>
 
 <style>
-.h87vhn {
-  max-height: 87vh;
+.carousel-img-responsive {
+  object-fit: cover;
+}
+.carousel-view-height {
+  height: 87vh;
+}
+@media (min-width: 768px) {
+  .carousel-view-height {
+    height: 87vh;
+  }
 }
 .carousel-mask {
   background-color: rgb(24, 24, 24, 0.6) !important;

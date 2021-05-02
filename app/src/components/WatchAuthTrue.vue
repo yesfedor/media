@@ -103,7 +103,7 @@ export default {
   data () {
     return {
       currentPlayer: '',
-      auth: undefined,
+      auth: true,
       type: '',
       nameRu: '',
       ratingAgeLimits: '',
@@ -151,8 +151,7 @@ export default {
           this.premiereWorldCountry = watchData.premiereWorldCountry
           this.filmLength = watchData.filmLength
           this.facts = (watchData.facts.length > 0 ? watchData.facts : [])
-          if (this.auth) document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
-          if (!this.auth) document.title = `Авторизуйтесь для просмотра ${this.type} ${this.nameRu}`
+          document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
           const countries = []
           watchData.countries.map(obj => {
             countries.push(obj.country)

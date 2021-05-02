@@ -1,6 +1,6 @@
 <template>
   <footer class="theme-footer text-center text-lg-start">
-    <div class="text-center theme-title p-3">
+    <div class="text-center theme-text p-3">
       © {{year}} Copyright:
       <a class="theme-title" target="_blank" href="https://iny.su/">{{logo}}</a>
     </div>
