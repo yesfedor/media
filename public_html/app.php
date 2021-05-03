@@ -43,20 +43,22 @@ include_once($core);
         <link rel="stylesheet" href="/vendor/css/bootstrap.min.css?version=1">
         <link rel="stylesheet" href="/vendor/css/mdb.min.css?version=1">
         <link rel="stylesheet" href="/css/dark.css?version=2">
-        <link rel="stylesheet" href="/css/themes.css?version=3">
-        <link rel="stylesheet" href="/css/common.css?version=2">
-        <link rel="stylesheet" href="/css/media.css?version=2">
-        <link href="/js/auth.95653d5b.js" rel="prefetch">
-        <link href="/js/intro.16d03150.js" rel="prefetch">
-        <link href="/js/playlist.5be9ee59.js" rel="prefetch">
-        <link href="/js/search.57c1149c.js" rel="prefetch">
-        <link href="/js/subscriptions.e38709bc.js" rel="prefetch">
-        <link href="/js/tops.06d7936a.js" rel="prefetch">
-        <link href="/js/watch.beed5229.js" rel="prefetch">
-        <link href="/css/app.10d781db.css" rel="preload" as="style">
-        <link href="/js/app.7e716973.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.fa54a9e7.js" rel="preload" as="script">
-        <link href="/css/app.10d781db.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/themes.css?version=4">
+        <link rel="stylesheet" href="/css/common.css?version=3">
+        <link rel="stylesheet" href="/css/media.css?version=3">
+        <link href="/js/auth.8801c290.js" rel="prefetch">
+        <link href="/js/intro.297d17e2.js" rel="prefetch">
+        <link href="/js/playlist.14ed95ca.js" rel="prefetch">
+        <link href="/js/search.00abed28.js" rel="prefetch">
+        <link href="/js/subscriptions.84dc4964.js" rel="prefetch">
+        <link href="/js/tops.00e2aa05.js" rel="prefetch">
+        <link href="/js/watch.12755368.js" rel="prefetch">
+        <link href="/js/watch.intro.a5ba3d8d.js" rel="prefetch">
+        <link href="/js/watch.player.a49b9f43.js" rel="prefetch">
+        <link href="/css/app.508f1716.css" rel="preload" as="style">
+        <link href="/js/app.caa8977d.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.abe19a1d.js" rel="preload" as="script">
+        <link href="/css/app.508f1716.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
@@ -81,7 +83,7 @@ include_once($core);
         <script src="/vendor/js/icon.js?version=1"></script>
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
-        <script src="/js/chunk-vendors.fa54a9e7.js"></script>
-        <script src="/js/app.7e716973.js"></script>
+        <script src="/js/chunk-vendors.abe19a1d.js"></script>
+        <script src="/js/app.caa8977d.js"></script>
     </body>
 </html>
