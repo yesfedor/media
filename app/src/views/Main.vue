@@ -11,7 +11,11 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <MediaPlaylist initState="opened" alias="1" />
+      <MediaPlaylist initState="opened" alias="welcome_netflix" />
+      <MediaPlaylist initState="opened" alias="welcome_apple" />
+      <MediaPlaylist initState="opened" alias="welcome_hbo" />
+      <MediaPlaylist initState="opened" alias="welcome_showtime" />
+      <MediaPlaylist initState="opened" alias="welcome_amc" />
     </div>
   </div>
 </template>
