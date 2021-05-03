@@ -17,10 +17,10 @@
       <div @click="go()" class="col-12 mb-3 col-md-6 col-lg-4 col-xl-3 embed-responsive embed-responsive-16by9">
         <div class="row justify-content-center align-items-center card-poster theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded px-3" :style="{'background-image':getBgImage()}">
           <div class="col-12 text-center">
-            <h4 class="white-text my-2">{{label_type}}</h4>
+            <h4 class="white-text text-capitalize my-2">{{label_type}}</h4>
           </div>
           <div class="col-12 text-center">
-            <h4 class="white-text my-2 text-truncate">{{title}}</h4>
+            <h4 class="white-text text-capitalize my-2 text-truncate">{{title}}</h4>
           </div>
           <div class="col-12 text-center">
             <button @click.stop="toggleState()" class="btn btn-outline-white btn-rounded my-2 w-100">{{(state === 'closed' ? 'Раскрыть':'Скрыть')}}</button>
