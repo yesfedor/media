@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-5">
+  <div class="container-fluid mt-3 pt-5">
     <div class="row">
       <div class="col-12 col-lg-4 offset-lg-4 text-center rounded text-content theme-panel my-3 py-3">
         <h3 class="theme-title my-0 py-3">Мои плейлисты</h3>

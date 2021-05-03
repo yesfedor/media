@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-5">
+  <div class="container-fluid mt-3 pt-5">
     <div class="row">
       <div class="col-12 text-center">
         <h1 class="theme-title mb-3 py-3">Мои подписки</h1>

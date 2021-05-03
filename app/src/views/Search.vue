@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-5">
+  <div class="container-fluid mt-3 pt-5">
     <div class="row justify-content-center">
       <div class="col-12 text-center">
         <h1 class="mb-3 py-3">Поиск</h1>

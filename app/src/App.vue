@@ -41,6 +41,7 @@ export default {
 
 <style>
 .router-view-height {
+  overflow-x: hidden;
   min-height: 100vh !important;
   /* min-height: 88.4vh !important; */
 }

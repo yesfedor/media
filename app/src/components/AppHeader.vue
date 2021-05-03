@@ -1,11 +1,11 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top theme-header z-depth-0" :class="(position[1] === 0 ? '':'theme-panel-blur theme-border-bottom-header')">
+  <nav class="navbar navbar-expand-lg fixed-top theme-header z-depth-0" :class="(position[1] === 0 && $route.name !== 'Watch' ? '':'theme-panel-blur theme-border-bottom-header')">
     <div class="container">
       <router-link class="navbar-brand theme-title" to="/">{{logo}}</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appNavbarTop" aria-controls="appNavbarTop" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars theme-title"></i>
       </button>
-      <div class="collapse navbar-collapse" id="appNavbarTop">
+      <div class="collapse navbar-collapse theme-panel-blur-mobile" id="appNavbarTop">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <router-link class="nav-link theme-title" to="/tops">В тренде</router-link>

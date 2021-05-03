@@ -1,5 +1,5 @@
 <template>
-  <div class="conteiner-fluid">
+  <div class="conteiner-fluid mt-5">
     <div class="row mt-3">
       <div class="col-12 col-md-10 offset-md-1">
         <!-- Wrapper -->

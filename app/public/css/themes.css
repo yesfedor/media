@@ -79,6 +79,7 @@ html, body {
     transition-duration: var(--theme-duration-change)!important;
     background-color: var(--theme-panel)!important;
 }
+
 .theme-panel-blur {
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
@@ -86,6 +87,16 @@ html, body {
     transition-property: -webkit-backdrop-filter, backdrop-filter, background-color;
     transition-duration: var(--theme-duration-change)!important;
 }
+@media (max-width: 991px) {
+    .theme-panel-blur-mobile {
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        background-color: #00000000;
+        transition-property: -webkit-backdrop-filter, backdrop-filter, background-color;
+        transition-duration: var(--theme-duration-change)!important;
+    }
+}
+
 .theme-border-bottom-header {
     border-bottom: 1px solid #aaa;
     transition-property:border-bottom;

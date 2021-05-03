@@ -1,5 +1,5 @@
 <template>
-    <div class="container pt-5">
+    <div class="container mt-3 pt-5">
       <div v-if="!status" class="row d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-6 my-3 py-3 border border-white rounded theme-panel text-center">
           <h3 class="theme-title my-0 py-3">Авторизация</h3>

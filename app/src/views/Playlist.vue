@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-5">
+  <div class="container-fluid mt-3 pt-5">
     <template v-if="playlistData.length > 0">
       <div class="row">
         <div class="col-12 col-lg-4 offset-lg-4 theme-panel z-depth-1 text-center mb-5 rounded px-0">
