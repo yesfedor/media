@@ -3,8 +3,13 @@
 </template>
 
 <script>
-import WatchAuthTrue from '../components/WatchAuthTrue'
-import WatchAuthFalse from '../components/WatchAuthFalse'
+import { defineAsyncComponent } from 'vue'
+const WatchAuthTrue = defineAsyncComponent(() =>
+  import(/* webpackChunkName: "watch.player" */'../components/WatchAuthTrue')
+)
+const WatchAuthFalse = defineAsyncComponent(() =>
+  import(/* webpackChunkName: "watch.intro" */'../components/WatchAuthFalse')
+)
 
 export default {
   name: 'Watch',
