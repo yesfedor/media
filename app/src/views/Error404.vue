@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid mt-5">
     <div class="row">
       <div class="col-12 text-center">
         <h1 class="theme-title my-0 py-3">Ошибка 404</h1>

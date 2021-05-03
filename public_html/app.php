@@ -54,9 +54,9 @@ include_once($core);
         <link href="/js/tops.00e2aa05.js" rel="prefetch">
         <link href="/js/watch.12755368.js" rel="prefetch">
         <link href="/js/watch.intro.a5ba3d8d.js" rel="prefetch">
-        <link href="/js/watch.player.a49b9f43.js" rel="prefetch">
+        <link href="/js/watch.player.d6b2ec10.js" rel="prefetch">
         <link href="/css/app.508f1716.css" rel="preload" as="style">
-        <link href="/js/app.caa8977d.js" rel="preload" as="script">
+        <link href="/js/app.cd39e440.js" rel="preload" as="script">
         <link href="/js/chunk-vendors.abe19a1d.js" rel="preload" as="script">
         <link href="/css/app.508f1716.css" rel="stylesheet">
 
@@ -84,6 +84,6 @@ include_once($core);
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
         <script src="/js/chunk-vendors.abe19a1d.js"></script>
-        <script src="/js/app.caa8977d.js"></script>
+        <script src="/js/app.cd39e440.js"></script>
     </body>
 </html>

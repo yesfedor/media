@@ -117,7 +117,7 @@ export default {
       facts: [],
       is_subscription: false,
       subscriptionCount: 0,
-      recoms: []
+      recoms: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
     }
   },
   mounted () {
@@ -167,7 +167,7 @@ export default {
     },
     getRecoms () {
       axios
-        .get('https://iny.su/api/0.1/media/mediaWatchRecoms.json')
+        .get(`https://iny.su/api.php?_action=media.similarsByKpid&v=0.1&kpid=${this.kpid}`)
         .then(res => {
           this.recoms = res.data
         })
