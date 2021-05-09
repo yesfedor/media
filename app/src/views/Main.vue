@@ -41,7 +41,14 @@ export default {
       data: ''
     }
   },
+  methods: {
+    maybeWelcome () {
+      const isWelcomeShow = localStorage.getItem('isWelcomeShowV1') || false
+      if (!isWelcomeShow) this.$router.push('/welcome')
+    }
+  },
   mounted () {
+    this.maybeWelcome()
     if (this.auth !== '' && this._origin === 'iny.su') {
       this.$store.commit('LOGIN', this.auth)
       this.$router.push('/')

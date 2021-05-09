@@ -50,8 +50,8 @@ const routes = [
   },
   {
     path: '/welcome',
-    name: 'Intro',
-    component: () => import(/* webpackChunkName: "intro" */ '../views/Intro.vue')
+    name: 'Welcome',
+    component: () => import(/* webpackChunkName: "welcome" */ '../views/Welcome.vue')
   },
   {
     path: '/:pathMatch(.*)*',
@@ -62,10 +62,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
-  scrollBehavior () {
-    document.getElementById('app').scrollIntoView()
-  }
+  routes
 })
 
 export default router

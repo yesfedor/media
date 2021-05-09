@@ -73,9 +73,9 @@ function getFilmByKpid($kpid) {
         'ogtype' => 'website',
         'ogsite_name' => $data['site-name'],
         'ogimage' => $content['data']['posterUrl'],
-        'page' => 'global/error403',
+        'page' => 'main',
         'access' => 'default',
-        'error' => 403
+        'error' => 200
     ];
 }
 // watch data

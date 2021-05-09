@@ -41,6 +41,10 @@ export default {
     }
   },
   methods: {
+    render () {
+      document.title = 'Работа с плейлистами'
+      this.getMyPlaylistByUid()
+    },
     getMyPlaylistByUid () {
       const user = this.$store.getters.USER
       axios
@@ -51,8 +55,9 @@ export default {
     }
   },
   mounted () {
-    document.title = 'Работа с плейлистами'
-    this.getMyPlaylistByUid()
+    this.auth = this.$store.getters.IS_AUTH
+    if (this.auth) this.render()
+    else this.$router.push('/auth')
   },
   computed: {
     get_auth () {
@@ -61,6 +66,8 @@ export default {
   },
   watch: {
     get_auth (isAuth) {
+      console.log(isAuth)
+      if (!isAuth) this.$router.push('/auth')
       this.auth = isAuth
     }
   },

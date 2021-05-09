@@ -27,7 +27,7 @@
               </div>
               <div class="col-12 col-lg-8 px-0 text-center text-lg-right mt-3 mt-lg-0">
                 <!--<button type="button" class="btn btn-rounded btn-outline-primary theme-duration ml-3" data-toggle="modal" data-target="#modalStaffByKpid">Больше</button> -->
-                <a href="httpl://go.iny.su/donate" target="_blank" class="btn btn-outline-primary btn-rounded">Донат</a>
+                <a href="https://go.iny.su/donate" target="_blank" class="btn btn-outline-primary btn-rounded">Донат</a>
                 <button @click="subsManager()" class="btn btn-rounded theme-duration ml-3" :class="(is_subscription ? 'btn-outline-primary':'btn-outline-red')">{{(is_subscription ? 'Отписаться':'Подписаться')}}</button>
               </div>
               <div class="col-12 px-0 my-3">
@@ -125,7 +125,7 @@ export default {
     if (!this.auth) this.$router.push('/')
     const currentPlayer = localStorage.getItem('currentPlayer')
     if (currentPlayer) this.currentPlayer = currentPlayer
-    else this.currentPlayer = 'svetacdn'
+    else this.currentPlayer = 'bazon'
     this.render()
     this.getRecoms()
   },

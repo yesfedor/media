@@ -33,55 +33,21 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'MediaCarousel',
   data () {
     return {
-      mediaData: {
-        1: {
-          object: 'playlist',
-          type: 'video',
-          title: 'Весь контент Netflix, Apple Originals, HBO и других студий',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/6533dc52/7ba28039fd9.jpg'
-        },
-        1312668: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Облака (2020)',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/6533dc52/7ba28039fd9.jpg'
-        },
-        306084: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Теория Большого Взрыва',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/0349a97a/37e1c5d5743.jpg'
-        },
-        741231: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Чёрный список',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/7881d5e4/bd3b5d06e0d.jpg'
-        },
-        893621: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Люцифер',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/ac2f241b/31a5d9fd655.jpg'
-        },
-        1231016: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Воспитанные волками',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/061c60f5/0b387a36eb5.jpg'
-        },
-        716587: {
-          object: 'kpid',
-          type: 'img',
-          title: 'Острые козырьки',
-          src: 'https://go.iny.su/uc/cc4ca42/v6f7584/51506a19/dc162113bd0.jpg'
-        }
-      }
+      mediaData: {}
     }
+  },
+  mounted () {
+    const hash = new Date()
+    const url = `https://iny.su/api/0.1/media/getCarouselData.json?v=${hash.getFullYear()}-${hash.getUTCHours()}`
+    axios
+      .get(url)
+      .then((res) => { this.mediaData = res.data })
   },
   methods: {
     go (object, alias) {
@@ -103,7 +69,7 @@ export default {
   object-fit: cover;
 }
 .carousel-view-height {
-  height: 100vh;
+  height: 70vh;
 }
 @media (min-width: 768px) {
   .carousel-view-height {
