@@ -2,7 +2,7 @@
   <div class="container-fluid px-0">
     <div class="view jarallax h90vh">
       <img class="jarallax-img" src="https://go.iny.su/uc/cc4ca42/v6f7584/8abc67c6/4dbea97c0d7.jpg" alt="">
-      <div class="mask pattern-1">
+      <div class="mask pattern-6">
         <div class="row h60vh align-items-end">
           <div class="col-10 col-lg-3 offset-1 text-center text-lg-left">
             <h1 class="h1-responsive font-weight-bold theme-title my-0">Лучшее кино<br> у вас дома</h1>
@@ -74,7 +74,7 @@ export default {
       this.$router.push('/auth')
     },
     goAllFilm () {
-      this.$router.push('/search')
+      this.$router.push('/tops')
     },
     init () {
       // eslint-disable-next-line

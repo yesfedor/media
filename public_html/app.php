@@ -47,16 +47,16 @@ include_once($core);
         <link rel="stylesheet" href="/css/common.css?version=3">
         <link rel="stylesheet" href="/css/media.css?version=3">
         <link href="/js/auth.10deb25a.js" rel="prefetch">
-        <link href="/js/playlist.5cad9e01.js" rel="prefetch">
+        <link href="/js/playlist.224957fb.js" rel="prefetch">
         <link href="/js/search.038b5f00.js" rel="prefetch">
         <link href="/js/subscriptions.5334413f.js" rel="prefetch">
         <link href="/js/tops.82d757f4.js" rel="prefetch">
         <link href="/js/watch.3177331c.js" rel="prefetch">
         <link href="/js/watch.intro.34344b83.js" rel="prefetch">
         <link href="/js/watch.player.1abce4d5.js" rel="prefetch">
-        <link href="/js/welcome.393784fd.js" rel="prefetch">
+        <link href="/js/welcome.28479af9.js" rel="prefetch">
         <link href="/css/app.48a9f048.css" rel="preload" as="style">
-        <link href="/js/app.8c082905.js" rel="preload" as="script">
+        <link href="/js/app.71fde7bc.js" rel="preload" as="script">
         <link href="/js/chunk-vendors.f0f47cff.js" rel="preload" as="script">
         <link href="/css/app.48a9f048.css" rel="stylesheet">
 
@@ -84,6 +84,6 @@ include_once($core);
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
         <script src="/js/chunk-vendors.f0f47cff.js"></script>
-        <script src="/js/app.8c082905.js"></script>
+        <script src="/js/app.71fde7bc.js"></script>
     </body>
 </html>

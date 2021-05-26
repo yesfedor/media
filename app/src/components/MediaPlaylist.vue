@@ -51,6 +51,7 @@ export default {
     return {
       state: 'closed', // closed or opened
       title: '',
+      poster: '',
       label_type: 'Плейлист',
       playlistData: []
     }
@@ -64,6 +65,8 @@ export default {
       else this.state = 'closed'
     },
     getBgImage () {
+      console.log(this.poster)
+      if (this.poster) return `url(${this.poster})`
       let firstKpid = 0
       if (this.playlistData.length >= 4) firstKpid = this.playlistData[this.playlistData.length - 1]?.filmId
       else firstKpid = this.playlistData[0]?.filmId
@@ -83,6 +86,7 @@ export default {
     axios
       .get('https://iny.su/api.php?_action=media.playlist&v=0.1&act=get&alias=' + this.alias)
       .then(res => {
+        this.poster = res.data.playlist.poster
         this.title = res.data.playlist.title
         this.playlistData = res.data.playlist.content
       })

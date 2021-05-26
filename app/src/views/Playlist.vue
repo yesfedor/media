@@ -1,14 +1,20 @@
 <template>
-  <div class="container-fluid mt-3 pt-5">
+  <div class="container-fluid">
     <template v-if="playlistData.length > 0">
-      <div class="row">
-        <div class="col-12 col-lg-4 offset-lg-4 theme-panel z-depth-1 text-center mb-5 rounded px-0">
-          <h1 class="h1-responsive theme-title mb-3 py-3 px-2 px-lg-3">{{title}}</h1>
-          <hr class="w-100">
-          <h5 v-if="description" class="h5-responsive theme-text mb-3 py-3 px-2 px-lg-3">{{description}}</h5>
+      <div class="view jarallax h90vh">
+        <img class="jarallax-img" :src="getPoster()" alt="Playlist logo">
+        <div class="mask pattern-6">
+          <div class="row h90vh align-items-center">
+            <div class="col-10 col-lg-3 offset-1 text-center text-lg-left">
+              <h1 class="h1-responsive font-weight-bold theme-title my-0">{{title}}</h1>
+              <p class="theme-text font-weight-lighter mt-3">
+                {{description}}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mt-3 px-3">
         <MediaCart v-for="cart in playlistData" :key="cart.filmId" view="default" :kpid="cart.filmId" :type="cart.type" :nameRu="cart.nameRu" :year="cart.year" />
       </div>
     </template>
@@ -37,8 +43,21 @@ export default {
     return {
       title: '',
       description: '',
+      poster: '',
       owner_uid: '',
       playlistData: []
+    }
+  },
+  methods: {
+    jarallax () {
+      setTimeout(() => {
+        // eslint-disable-next-line
+        jarallax(document.querySelectorAll('.jarallax'));jarallax(document.querySelectorAll('.jarallax-keep-img'),{keepImg: true});
+      }, 800)
+    },
+    getPoster () {
+      this.jarallax()
+      return this.poster
     }
   },
   mounted () {
@@ -48,8 +67,10 @@ export default {
       .then(res => {
         this.title = res.data.playlist.title
         this.description = res.data.playlist.description
+        this.poster = res.data.playlist.poster
         this.owner_uid = res.data.playlist.owner_uid
         this.playlistData = res.data.playlist.content
+        this.jarallax()
       })
   }
 }

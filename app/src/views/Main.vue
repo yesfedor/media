@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid px-0">
     <MediaCarousel />
-    <div class="row">
-      <div class="col-12 col-lg-6 offset-lg-3 theme-panel rounded text-center my-3 py-5">
+    <div class="row theme-panel rounded text-center my-3 py-5">
+      <div class="col-12 col-lg-6 offset-lg-3">
         <h1 class="h4 theme-title mb-1 px-1 px-lg-4 font-weight-lighter">
           Вы уже написали в гугле «сериал смотреть онлайн» и листаете большой перечень ресурсов, где между волнующего момента возлюбленного телесериала вам нежданно-негаданно предложат сделать ставку или узнать о волшебном средстве,            которое вылечит от всех болезней. Дальше лучше не листать, вы на
           верном пути: на INY Media возможно законно смотреть знаменитые телесериалы онлайн, не
@@ -10,11 +10,11 @@
         </h1>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <MediaPlaylist initState="opened" alias="welcome_netflix" />
-      <MediaPlaylist initState="opened" alias="welcome_apple" />
-      <MediaPlaylist initState="opened" alias="welcome_hbo" />
-      <MediaPlaylist initState="opened" alias="welcome_showtime" />
+    <div class="row justify-content-center mt-3 px-3">
+      <MediaPlaylist initState="closed" alias="welcome_netflix" />
+      <MediaPlaylist initState="closed" alias="welcome_apple" />
+      <MediaPlaylist initState="closed" alias="welcome_hbo" />
+      <MediaPlaylist initState="closed" alias="welcome_showtime" />
       <MediaPlaylist initState="opened" alias="welcome_amc" />
     </div>
   </div>
