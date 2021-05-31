@@ -11,6 +11,11 @@ const routes = [
     props: route => ({ auth: (route.query.auth ? route.query.auth : ''), _origin: (route.query._origin ? route.query._origin : '') })
   },
   {
+    path: '/feed',
+    name: 'Feed',
+    component: () => import(/* webpackChunkName: "feed" */ '../views/Feed.vue')
+  },
+  {
     path: '/search',
     name: 'Search',
     component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
@@ -36,6 +41,11 @@ const routes = [
     path: '/subscriptions',
     name: 'Subscriptions',
     component: () => import(/* webpackChunkName: "subscriptions" */ '../views/Subscriptions.vue')
+  },
+  {
+    path: '/history',
+    name: 'History',
+    component: () => import(/* webpackChunkName: "history" */ '../views/History.vue')
   },
   {
     path: '/auth',

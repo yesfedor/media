@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid px-0 px-lg-3">
     <template v-if="playlistData.length > 0">
       <div class="view jarallax h90vh">
         <img class="jarallax-img" :src="getPoster()" alt="Playlist logo">
@@ -52,7 +52,7 @@ export default {
     jarallax () {
       setTimeout(() => {
         // eslint-disable-next-line
-        jarallax(document.querySelectorAll('.jarallax'));jarallax(document.querySelectorAll('.jarallax-keep-img'),{keepImg: true});
+        jarallax(document.querySelectorAll('.jarallax'), {speed: 0});
       }, 800)
     },
     getPoster () {

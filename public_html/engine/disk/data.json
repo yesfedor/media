@@ -83,6 +83,16 @@
             "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
             "page":"main"
         },
+        "/history": {
+            "access":"default",
+            "title":"Просмотренное на сайте за все время",
+            "description":"localeStr",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
+            "page":"main"
+        },
         "/welcome": {
             "access":"default",
             "title":"INY Media - больше возможностей, а также полное погружение в мир кинолент",

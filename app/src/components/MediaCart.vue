@@ -1,6 +1,6 @@
 <template>
   <div class="embed-responsive embed-responsive-16by9" :class="(view === 'default' ? 'col-12 mb-3 col-md-6 col-lg-4 col-xl-3':'col-12 mb-3')">
-    <div @click="go()" class="row justify-content-center align-items-center card-poster theme-duration embed-responsive-item ml-0 cursor-pointer rounded" :class="(view === 'default' ? 'card-poster_view-default':'card-poster_view-max-content')" :style="{'background-image':getBgImage()}">
+    <div @click="go()" class="row justify-content-center align-items-center card-poster theme-duration embed-responsive-item ml-0 cursor-pointer rounded" :class="theme + ' ' + (view === 'default' ? 'card-poster_view-default':'card-poster_view-max-content')" :style="{'background-image':getBgImage()}">
       <div class="col-12 text-center">
         <h5 class="white-text text-capitalize my-2">{{label_type}}</h5>
       </div>
@@ -18,6 +18,11 @@
 export default {
   name: 'MediaCart',
   props: {
+    theme: {
+      default: 'card-poster',
+      required: false,
+      type: String
+    },
     view: String,
     kpid: Number,
     type: String,

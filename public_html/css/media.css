@@ -17,6 +17,18 @@
     background-color: #00000088;
 }
 
+.card-poster-light {
+    filter: grayscale(0);
+    background-color: #00000088;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    transition: background-color, filter;
+    transition-duration: 0.5s;
+}
+
+
 .card-poster_view-default, card-poster_view-max-content {
     /*height: 60vh;*/
     height: auto;

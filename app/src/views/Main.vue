@@ -1,20 +1,11 @@
 <template>
-  <div class="container-fluid px-0">
+  <div class="container-fluid px-0 px-lg-3">
     <MediaCarousel />
-    <div class="row theme-panel rounded text-center my-3 py-5">
-      <div class="col-12 col-lg-6 offset-lg-3">
-        <h1 class="h4 theme-title mb-1 px-1 px-lg-4 font-weight-lighter">
-          Вы уже написали в гугле «сериал смотреть онлайн» и листаете большой перечень ресурсов, где между волнующего момента возлюбленного телесериала вам нежданно-негаданно предложат сделать ставку или узнать о волшебном средстве,            которое вылечит от всех болезней. Дальше лучше не листать, вы на
-          верном пути: на INY Media возможно законно смотреть знаменитые телесериалы онлайн, не
-          отрываясь на рекламу и прочую суету.
-        </h1>
-      </div>
-    </div>
-    <div class="row justify-content-center mt-3 px-3">
-      <MediaPlaylist initState="closed" alias="welcome_netflix" />
-      <MediaPlaylist initState="closed" alias="welcome_apple" />
-      <MediaPlaylist initState="closed" alias="welcome_hbo" />
-      <MediaPlaylist initState="closed" alias="welcome_showtime" />
+    <div class="row justify-content-center mt-3 px-lg-3">
+      <MediaPlaylist initState="opened" alias="welcome_netflix" />
+      <MediaPlaylist initState="opened" alias="welcome_apple" />
+      <MediaPlaylist initState="opened" alias="welcome_hbo" />
+      <MediaPlaylist initState="opened" alias="welcome_showtime" />
       <MediaPlaylist initState="opened" alias="welcome_amc" />
     </div>
   </div>
@@ -23,9 +14,6 @@
 <script>
 import MediaCarousel from '../components/MediaCarousel'
 import MediaPlaylist from '../components/MediaPlaylist'
-/*
-  main list(tops):
-*/
 export default {
   name: 'Main',
   props: {
@@ -38,13 +26,19 @@ export default {
   },
   data () {
     return {
-      data: ''
+      data: '',
+      isAuth: false
     }
   },
   methods: {
     maybeWelcome () {
-      const isWelcomeShow = localStorage.getItem('isWelcomeShowV1') || false
+      const isWelcomeShow = localStorage.getItem('isWelcomeShowV2') || false
       if (!isWelcomeShow) this.$router.push('/welcome')
+    }
+  },
+  computed: {
+    auth_staus () {
+      return this.$store.getters.IS_AUTH
     }
   },
   mounted () {
@@ -54,7 +48,13 @@ export default {
       this.$router.push('/')
     }
 
+    if (this.$store.getters.IS_AUTH) this.$router.push('/feed')
     document.title = 'INY Media - Онлайн кинотеатр'
+  },
+  watch: {
+    auth_staus (status) {
+      if (status) this.$router.push('/feed')
+    }
   }
 }
 </script>

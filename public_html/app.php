@@ -45,19 +45,21 @@ include_once($core);
         <link rel="stylesheet" href="/css/dark.css?version=2">
         <link rel="stylesheet" href="/css/themes.css?version=4">
         <link rel="stylesheet" href="/css/common.css?version=3">
-        <link rel="stylesheet" href="/css/media.css?version=3">
-        <link href="/js/auth.10deb25a.js" rel="prefetch">
-        <link href="/js/playlist.224957fb.js" rel="prefetch">
+        <link rel="stylesheet" href="/css/media.css?version=7">
+        <link href="/css/auth.41741b9d.css" rel="prefetch">
+        <link href="/js/auth.abe7b251.js" rel="prefetch">
+        <link href="/js/history.eb32c4eb.js" rel="prefetch">
+        <link href="/js/playlist.ab30e6ed.js" rel="prefetch">
         <link href="/js/search.038b5f00.js" rel="prefetch">
         <link href="/js/subscriptions.5334413f.js" rel="prefetch">
         <link href="/js/tops.82d757f4.js" rel="prefetch">
         <link href="/js/watch.3177331c.js" rel="prefetch">
         <link href="/js/watch.intro.34344b83.js" rel="prefetch">
         <link href="/js/watch.player.1abce4d5.js" rel="prefetch">
-        <link href="/js/welcome.28479af9.js" rel="prefetch">
+        <link href="/js/welcome.cf0911f9.js" rel="prefetch">
         <link href="/css/app.48a9f048.css" rel="preload" as="style">
-        <link href="/js/app.71fde7bc.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.f0f47cff.js" rel="preload" as="script">
+        <link href="/js/app.0693e9cd.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.953d7b85.js" rel="preload" as="script">
         <link href="/css/app.48a9f048.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
@@ -67,10 +69,10 @@ include_once($core);
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(68637091, "init", {
-                clickmap:true,
+                clickmap:false,
                 trackLinks:true,
                 accurateTrackBounce:true,
-                webvisor:true
+                webvisor:false
         });
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/68637091" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -83,7 +85,8 @@ include_once($core);
         <script src="/vendor/js/icon.js?version=1"></script>
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
-        <script src="/js/chunk-vendors.f0f47cff.js"></script>
-        <script src="/js/app.71fde7bc.js"></script>
+        <script src="/js/chunk-vendors.953d7b85.js"></script>
+        <script src="/js/app.0693e9cd.js"></script>
+</body>
     </body>
 </html>

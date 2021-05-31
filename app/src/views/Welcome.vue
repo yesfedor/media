@@ -10,25 +10,25 @@
               В INY Media собрана библиотека лучших фильмов и сериалов.
               Смотрите их в любимой озвучке LostFilm, NewStudio, AlexFilm и др. - онлайн.
             </p>
-            <button @click="goMainAction()" class="btn purple-gradient mx-0 my-2">Смотреть бесплатно</button>
+            <button @click="goMainAction()" class="btn blue-gradient mx-0 my-2">Регистрируйтесь бесплатно</button>
             <p class="text-monospace theme-title">Пройдите быструю регистрацию и смотрите - бесплатно</p>
           </div>
         </div>
-        <div class="d-none d-lg-flex row h30vh align-items-center">
-          <div class="col-3 offset-1 flex-center">
-            <i class="far fa-list-alt purple-text fa-2x"></i>
+        <div class="d-none d-lg-flex row h30vh align-items-center justify-content-around">
+          <div class="col-3 flex-center rgba-black-strong rounded py-3">
+            <i class="far fa-list-alt cyan-text fa-2x"></i>
             <p class="d-inline theme-title font-weight-lighter pl-3">
               Более 25 000 фильмов и сериалов<br>уже в библиотеке для<br>вас и вашей семьи
             </p>
           </div>
-          <div class="col-4 flex-center">
-            <i class="fas fa-user-check purple-text fa-2x"></i>
+          <div class="col-3 flex-center rgba-black-strong rounded py-3">
+            <i class="fas fa-user-check blue-text fa-2x"></i>
             <p class="d-inline theme-title font-weight-lighter pl-3">
-              Большой список рекомендаций на<br>основе ваших интересов
+              Выбирайте фильм или сериал<br> на основе ваших интересов,<br>смотрите популярные плейлисты
             </p>
           </div>
-          <div class="col-3 flex-center">
-            <i class="fas fa-globe-europe purple-text fa-2x"></i>
+          <div class="col-3 flex-center rgba-black-strong rounded py-3">
+            <i class="fas fa-globe-europe indigo-text fa-2x"></i>
             <p class="d-inline theme-title font-weight-lighter pl-3">
               Фильмы и сериалы со всего света<br>Включая все популярные<br>студии мира
             </p>
@@ -36,23 +36,42 @@
         </div>
       </div>
     </div>
-    <div class="row deep-purple darken-3 align-items-center h50vh">
-      <div class="col-10 offset-1 text-center">
-        <div class="row">
-          <div class="d-flex justify-content-between col-12 text-center text-lg-left mb-5">
-            <h2 class="w-75 h1-responsive font-weight-bold theme-title my-0">Фильмы с высоким рейтигном</h2>
-            <button @click="goAllFilm()" class="w-25 btn btn-link my-0 theme-title">Все фильмы</button>
+    <div class="blue-gradient">
+      <div class="row align-items-center h50vh">
+        <div class="col-10 offset-1 text-center">
+          <div class="row">
+            <div class="d-flex justify-content-between col-12 text-center text-lg-left mb-5">
+              <h2 class="w-100 w-lg-75 h1-responsive font-weight-bold theme-title my-0 my-3 my-lg-0">Фильмы с высоким рейтигном</h2>
+            </div>
+            <MediaCart view="default" :kpid="'1387021'" :type="'FILM'" :nameRu="'Лига справедливости Зака Снайдера'" :year="'2021'" theme="card-poster-light" />
+            <MediaCart view="default" :kpid="'1309596'" :type="'FILM'" :nameRu="'Никто'" :year="'2021'" theme="card-poster-light" />
+            <MediaCart view="default" :kpid="'1015471'" :type="'FILM'" :nameRu="'Райя и последний дракон'" :year="'2021'" theme="card-poster-light" />
+            <MediaCart view="default" :kpid="'1202296'" :type="'FILM'" :nameRu="'Палмер'" :year="'2021'" theme="card-poster-light" />
           </div>
-          <MediaCart view="default" :kpid="'1387021'" :type="'FILM'" :nameRu="'Лига справедливости Зака Снайдера'" :year="'2021'" />
-          <MediaCart view="default" :kpid="'1309596'" :type="'FILM'" :nameRu="'Никто'" :year="'2021'" />
-          <MediaCart view="default" :kpid="'1015471'" :type="'FILM'" :nameRu="'Райя и последний дракон'" :year="'2021'" />
-          <MediaCart view="default" :kpid="'1202296'" :type="'FILM'" :nameRu="'Палмер'" :year="'2021'" />
         </div>
       </div>
-    </div>
-    <div class="row deep-purple darken-4 align-items-center text-center h10vh">
-      <div class="col-10 offset-1 text-center">
-        <button @click="goMainAction()" class="btn purple-gradient mx-0 my-2 w-100">Перейти к авторизации</button>
+      <hr class="border border-white">
+      <div class="row align-items-center h50vh">
+        <div class="col-10 offset-1 text-center">
+          <div class="row">
+            <div class="d-flex justify-content-between col-12 text-center text-lg-left mb-5">
+              <h2 class="w-100 w-lg-75 h1-responsive font-weight-bold theme-title my-0 my-3 my-lg-0">Популярные плейлисты</h2>
+            </div>
+            <MediaPlaylist initState="closed" alias="welcome_netflix" :actionBtn="false" theme="card-poster-light" />
+            <MediaPlaylist initState="closed" alias="welcome_apple" :actionBtn="false" theme="card-poster-light" />
+            <MediaPlaylist initState="closed" alias="welcome_hbo" :actionBtn="false" theme="card-poster-light" />
+            <MediaPlaylist initState="closed" alias="welcome_showtime" :actionBtn="false" theme="card-poster-light" />
+          </div>
+        </div>
+      </div>
+      <hr class="border border-white">
+      <div class="row align-items-center h50vh text-center">
+        <div class="col-10 offset-1 text-center px-0">
+          <h3 class="h1-responsive theme-title mb-5">
+            Вы уже написали в гугле «сериал смотреть онлайн» и листаете большой перечень ресурсов, где между волнующего момента возлюбленного телесериала вам нежданно-негаданно предложат сделать ставку или узнать о волшебном средстве, которое вылечит от всех болезней. Дальше лучше не листать, вы на верном пути: на INY Media возможно законно смотреть знаменитые телесериалы онлайн, не отрываясь на рекламу и прочую суету.
+          </h3>
+          <button @click="goMainAction()" class="btn btn-outline-white mx-0 my-2 w-50 mx-0">Перейти к авторизации</button>
+        </div>
       </div>
     </div>
   </div>
@@ -60,10 +79,13 @@
 
 <script>
 import MediaCart from '../components/MediaCart'
+import MediaPlaylist from '../components/MediaPlaylist'
+
 export default {
   name: 'Welcome',
   components: {
-    MediaCart
+    MediaCart,
+    MediaPlaylist
   },
   data () {
     return {
@@ -73,14 +95,11 @@ export default {
     goMainAction () {
       this.$router.push('/auth')
     },
-    goAllFilm () {
-      this.$router.push('/tops')
-    },
     init () {
       // eslint-disable-next-line
-      eval(`jarallax(document.querySelectorAll('.jarallax'));jarallax(document.querySelectorAll('.jarallax-keep-img'),{keepImg: true});`)
+      jarallax(document.querySelectorAll('.jarallax'), {speed: 0});
       // maybeWelcome set
-      localStorage.setItem('isWelcomeShowV1', 'true')
+      localStorage.setItem('isWelcomeShowV2', 'true')
     }
   },
   computed: {

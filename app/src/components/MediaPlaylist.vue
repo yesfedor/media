@@ -1,6 +1,6 @@
 <template>
   <div v-if="state === 'closed'" class="col-12 mb-3 col-md-6 col-lg-4 col-xl-3 embed-responsive embed-responsive-16by9">
-    <div @click="go()" class="row justify-content-center align-items-center card-poster theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded px-3" :style="{'background-image':getBgImage()}">
+    <div @click="go()" :class="theme" class="row justify-content-center align-items-center theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded px-3" :style="{'background-image':getBgImage()}">
       <div class="col-12 text-center">
         <h4 class="white-text my-2">{{label_type}}</h4>
       </div>
@@ -8,7 +8,7 @@
         <h4 class="d-lg-none white-text my-2">{{ getShortTitleFromMobile(title) }}</h4>
         <h4 class="d-none d-lg-block white-text my-2">{{ getShortTitleFromPC(title) }}</h4>
       </div>
-      <div class="col-12 text-center">
+      <div v-if="actionBtn" class="col-12 text-center">
         <button @click.stop="toggleState()" class="btn btn-outline-white btn-rounded btn-large my-2 w-100">{{(state === 'closed' ? 'Раскрыть':'Скрыть')}}</button>
       </div>
     </div>
@@ -16,7 +16,7 @@
   <div v-else class="col-12">
     <div class="row">
       <div @click="go()" class="col-12 mb-3 col-md-6 col-lg-4 col-xl-3 embed-responsive embed-responsive-16by9">
-        <div class="row justify-content-center align-items-center card-poster theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded px-3" :style="{'background-image':getBgImage()}">
+        <div :class="theme" class="row justify-content-center align-items-center theme-duration card-poster_view-default embed-responsive-item ml-0 cursor-pointer rounded px-3" :style="{'background-image':getBgImage()}">
           <div class="col-12 text-center">
             <h4 class="white-text my-2">{{label_type}}</h4>
           </div>
@@ -24,7 +24,7 @@
             <h4 class="d-lg-none white-text my-2">{{ getShortTitleFromMobile(title) }}</h4>
             <h4 class="d-none d-lg-block white-text my-2">{{ getShortTitleFromPC(title) }}</h4>
           </div>
-          <div class="col-12 text-center">
+          <div v-if="actionBtn" class="col-12 text-center">
             <button @click.stop="toggleState()" class="btn btn-outline-white btn-rounded my-2 w-100">{{(state === 'closed' ? 'Раскрыть':'Скрыть')}}</button>
           </div>
         </div>
@@ -45,7 +45,17 @@ export default {
   },
   props: {
     alias: String,
-    initState: String
+    initState: String,
+    theme: {
+      default: 'card-poster',
+      required: false,
+      type: String
+    },
+    actionBtn: {
+      default: true,
+      required: false,
+      type: Boolean
+    }
   },
   data () {
     return {
@@ -65,7 +75,6 @@ export default {
       else this.state = 'closed'
     },
     getBgImage () {
-      console.log(this.poster)
       if (this.poster) return `url(${this.poster})`
       let firstKpid = 0
       if (this.playlistData.length >= 4) firstKpid = this.playlistData[this.playlistData.length - 1]?.filmId

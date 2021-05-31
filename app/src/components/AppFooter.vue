@@ -1,5 +1,5 @@
 <template>
-  <footer class="theme-footer text-center text-lg-start">
+  <footer v-if="$route.name !== 'Welcome'" class="theme-footer text-center text-lg-start">
     <div class="text-center theme-text p-3">
       © {{year}} Copyright:
       <a class="theme-title" target="_blank" href="https://iny.su/">{{logo}}</a>

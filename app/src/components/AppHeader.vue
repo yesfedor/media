@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top theme-header z-depth-0" :class="(position[1] === 0 && $route.name !== 'Watch' ? '':'theme-panel-blur theme-border-bottom-header')">
+  <nav class="navbar navbar-expand-lg fixed-top theme-header z-depth-0" :class="(position[1] === 0 && $route.name !== 'Watch' && $route.name !== 'Search' ? '':'theme-panel-blur theme-border-bottom-header')">
     <div class="container">
-      <router-link class="navbar-brand theme-title" to="/">{{logo}}</router-link>
+      <router-link class="navbar-brand theme-title" :to="getLogoLink()">{{logo}}</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appNavbarTop" aria-controls="appNavbarTop" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars theme-title"></i>
       </button>
@@ -22,7 +22,7 @@
             <router-link class="nav-link theme-title" to="/subscriptions">Подписки</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link theme-title" to="/auth">Аккаунт</router-link>
+            <router-link class="nav-link theme-title" to="/auth">{{getProfileText()}}</router-link>
           </li>
         </ul>
       </div>
@@ -42,13 +42,17 @@ export default {
   data () {
     return {
       AppNavbarSearch: '',
-      auth: undefined
+      auth: undefined,
+      user: this.$store.getters.USER
     }
   },
   mounted () {
     this.auth = this.$store.getters.IS_AUTH
   },
   computed: {
+    get_user () {
+      return this.$store.getters.USER
+    },
     get_auth () {
       return this.$store.getters.IS_AUTH
     },
@@ -57,6 +61,14 @@ export default {
     }
   },
   methods: {
+    getLogoLink () {
+      if (this.auth) return '/feed'
+      if (!this.auth) return '/'
+    },
+    getProfileText () {
+      if (this.user?.name === '') return 'Войти'
+      else return this.user.name
+    },
     goToSearch () {
       const searchUrl = `/search?request=${this.AppNavbarSearch}`
       if (this.$route.name === 'Watch') window.open(searchUrl, 'blank')
@@ -67,6 +79,9 @@ export default {
   watch: {
     get_auth (status) {
       this.auth = status
+    },
+    get_user (user) {
+      this.user = user
     }
   }
 }
