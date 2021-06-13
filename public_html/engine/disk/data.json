@@ -102,6 +102,16 @@
             "ogsite_name":"INY Media",
             "ogimage":"https://iny.su/web/file/ogimg/main/media.png",
             "page":"main"
+        },
+        "/changelog": {
+            "access":"default",
+            "title":"INY Media - ChangeLog",
+            "description":"Журнализация изменений проекта",
+            "keywords":"сериал, смотреть онлайн, топ 10, что посмотреть, онлайн кинотеатр, INY Media",
+            "ogtype":"website",
+            "ogsite_name":"INY Media",
+            "ogimage":"https://iny.su/web/file/ogimg/main/dev.png",
+            "page":"main"
         }
     }
 }

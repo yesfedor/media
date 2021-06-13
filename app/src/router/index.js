@@ -64,6 +64,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "welcome" */ '../views/Welcome.vue')
   },
   {
+    path: '/changelog',
+    name: 'Changelog',
+    component: () => import(/* webpackChunkName: "changelog" */ '../views/Changelog.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'Error404',
     component: Error404

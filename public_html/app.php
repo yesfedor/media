@@ -4,7 +4,7 @@ $core = $public.'/engine/core.php';
 include_once($core);
 ?>
 <!DOCTYPE html>
-<html lang="<?= $_SESSION['lang'] ?>">
+<html id="html" lang="<?= $_SESSION['lang'] ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,19 +47,21 @@ include_once($core);
         <link rel="stylesheet" href="/css/common.css?version=3">
         <link rel="stylesheet" href="/css/media.css?version=7">
         <link href="/css/auth.41741b9d.css" rel="prefetch">
-        <link href="/js/auth.abe7b251.js" rel="prefetch">
-        <link href="/js/history.eb32c4eb.js" rel="prefetch">
-        <link href="/js/playlist.ab30e6ed.js" rel="prefetch">
-        <link href="/js/search.038b5f00.js" rel="prefetch">
-        <link href="/js/subscriptions.5334413f.js" rel="prefetch">
-        <link href="/js/tops.82d757f4.js" rel="prefetch">
-        <link href="/js/watch.3177331c.js" rel="prefetch">
-        <link href="/js/watch.intro.34344b83.js" rel="prefetch">
-        <link href="/js/watch.player.1abce4d5.js" rel="prefetch">
-        <link href="/js/welcome.cf0911f9.js" rel="prefetch">
+        <link href="/css/watch.player.5f3df3d4.css" rel="prefetch">
+        <link href="/js/auth.81daf073.js" rel="prefetch">
+        <link href="/js/feed.59f73034.js" rel="prefetch">
+        <link href="/js/history.c7dfba91.js" rel="prefetch">
+        <link href="/js/playlist.a7ead5b8.js" rel="prefetch">
+        <link href="/js/search.2ea759bc.js" rel="prefetch">
+        <link href="/js/subscriptions.c82110fc.js" rel="prefetch">
+        <link href="/js/tops.8524af82.js" rel="prefetch">
+        <link href="/js/watch.43f292d2.js" rel="prefetch">
+        <link href="/js/watch.intro.59df8746.js" rel="prefetch">
+        <link href="/js/watch.player.29177bd5.js" rel="prefetch">
+        <link href="/js/welcome.045cb9bf.js" rel="prefetch">
         <link href="/css/app.48a9f048.css" rel="preload" as="style">
-        <link href="/js/app.0693e9cd.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.953d7b85.js" rel="preload" as="script">
+        <link href="/js/app.b091a752.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.781299a5.js" rel="preload" as="script">
         <link href="/css/app.48a9f048.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
@@ -85,8 +87,7 @@ include_once($core);
         <script src="/vendor/js/icon.js?version=1"></script>
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
-        <script src="/js/chunk-vendors.953d7b85.js"></script>
-        <script src="/js/app.0693e9cd.js"></script>
-</body>
+        <script src="/js/chunk-vendors.781299a5.js"></script>
+        <script src="/js/app.b091a752.js"></script>
     </body>
 </html>

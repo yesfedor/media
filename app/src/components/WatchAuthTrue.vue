@@ -14,7 +14,10 @@
                   <a class="btn btn-link btn-sm" :class="(currentPlayer === 'bazon' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='bazon'">Bazon</a>
                 </h4>
               </div>
-              <div class="col-12 embed-responsive embed-responsive-16by9">
+              <div :class="(isPlayerActive ? 'd-none':'d-block')" class="col-12 embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive-item"></div>
+              </div>
+              <div id="player-layout" class="col-12 embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" :src="getSrc(currentPlayer)" frameborder="0" scrolling="no" allowfullscreen="" referrerpolicy="origin"></iframe>
               </div>
               <div class="col-12 px-3 px-md-0">
@@ -58,7 +61,7 @@
                 </ul>
               </div>
             <div class="col-12 theme-panel rounded text-center py-3 my-3">
-              <h4 class="text-center text-center theme-title py-3 mb-3">Факты</h4>
+              <h4 class="theme-title py-3 mb-3">Факты</h4>
               <div class="row">
                 <template v-if="facts.length > 0">
                   <h5 v-for="(content, idx) in facts" :key="idx" class="d-block theme-text text-left px-3 mb-3">
@@ -67,6 +70,13 @@
                 </template>
                 <div v-else class="col-12">
                   <h5 class="d-block theme-text text-center px-3 mb-3">Факты еще не подобраны</h5>
+                </div>
+              </div>
+            </div>
+            <div id="iny-main-comments" class="col-12 theme-panel rounded py-3 my-3">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h4 class="text-center text-center theme-title py-3">Комментарии</h4>
                 </div>
               </div>
             </div>
@@ -91,6 +101,7 @@
 <script>
 import axios from 'axios'
 import MediaCart from './MediaCart'
+import windowScrollPosition from '../mixins/window-scroll-position'
 
 export default {
   name: 'WatchAuthTrue',
@@ -100,8 +111,10 @@ export default {
   props: {
     kpid: String
   },
+  mixins: [windowScrollPosition('position')],
   data () {
     return {
+      isPlayerActive: true,
       currentPlayer: '',
       auth: true,
       type: '',
@@ -128,8 +141,39 @@ export default {
     else this.currentPlayer = 'bazon'
     this.render()
     this.getRecoms()
+    console.log(this.position)
   },
   methods: {
+    setPlayerClassPositionDefault () {
+      const $player = document.querySelector('#player-layout')
+      this.isPlayerActive = true
+      $player.classList.remove('layout-zip')
+    },
+    setPlayerClassPositionZip () {
+      const $player = document.querySelector('#player-layout')
+
+      this.isPlayerActive = false
+      $player.classList.add('layout-zip')
+      $player.classList.add('opacity-0')
+
+      setTimeout(() => {
+        const appWidth = window.innerWidth
+        const appHeight = window.innerHeight
+        const blockWidth = $player.offsetWidth
+        const blockHeight = $player.offsetHeight
+
+        // eslint-disable-next-line
+        html.style.setProperty('--app-width', appWidth + 'px')
+        // eslint-disable-next-line
+        html.style.setProperty('--app-height', appHeight + 'px')
+        // eslint-disable-next-line
+        html.style.setProperty('--player-width', Math.round(blockWidth * 0.75) + 'px')
+        // eslint-disable-next-line
+        html.style.setProperty('--player-height', Math.round(blockHeight * 0.75) + 'px')
+
+        $player.classList.remove('opacity-0')
+      }, 0)
+    },
     render () {
       axios
         .get(`https://iny.su/api.php?_action=media.watch&v=0.1&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
@@ -206,6 +250,20 @@ export default {
     }
   },
   watch: {
+    position ([x, y]) {
+      if (y === 0 && !this.isPlayerActive) {
+        setTimeout(() => {
+          this.setPlayerClassPositionDefault()
+        }, 500)
+      }
+      if (y !== 0 && y < 50 && !this.isPlayerActive) {
+        this.setPlayerClassPositionDefault()
+      }
+      const ihHalf = window.innerHeight / 2
+      if (y >= ihHalf && this.isPlayerActive) {
+        this.setPlayerClassPositionZip()
+      }
+    },
     get_auth (isAuth) {
       this.auth = isAuth
     },
@@ -216,3 +274,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (min-width: 990px) {
+  .opacity-0 {
+    opacity: 0
+  }
+  .layout-zip {
+    margin-top: calc(var(--app-height) - var(--player-height));
+    margin-left: calc(var(--app-width) - var(--player-width));
+    position:fixed;
+    transform: scale(0.3);
+    z-index: 5000;
+  }
+}
+</style>

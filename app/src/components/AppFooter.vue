@@ -3,6 +3,7 @@
     <div class="text-center theme-text p-3">
       © {{year}} Copyright:
       <a class="theme-title" target="_blank" href="https://iny.su/">{{logo}}</a>
+      <router-link to="/changelog" class="theme-nav-link pl-3">{{version}}</router-link>
     </div>
   </footer>
 </template>
@@ -15,6 +16,7 @@ export default {
   },
   data () {
     return {
+      version: 'media-v5.1.2',
       year: new Date().getFullYear()
     }
   }
