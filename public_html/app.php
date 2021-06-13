@@ -42,13 +42,14 @@ include_once($core);
 
         <link rel="stylesheet" href="/vendor/css/bootstrap.min.css?version=1">
         <link rel="stylesheet" href="/vendor/css/mdb.min.css?version=1">
-        <link rel="stylesheet" href="/css/dark.css?version=2">
+        <link rel="stylesheet" href="/css/dark.css?version=3">
         <link rel="stylesheet" href="/css/themes.css?version=4">
         <link rel="stylesheet" href="/css/common.css?version=3">
         <link rel="stylesheet" href="/css/media.css?version=7">
         <link href="/css/auth.41741b9d.css" rel="prefetch">
-        <link href="/css/watch.player.5f3df3d4.css" rel="prefetch">
+        <link href="/css/watch.player.51737294.css" rel="prefetch">
         <link href="/js/auth.81daf073.js" rel="prefetch">
+        <link href="/js/changelog.90ebcfa1.js" rel="prefetch">
         <link href="/js/feed.59f73034.js" rel="prefetch">
         <link href="/js/history.c7dfba91.js" rel="prefetch">
         <link href="/js/playlist.a7ead5b8.js" rel="prefetch">
@@ -57,11 +58,11 @@ include_once($core);
         <link href="/js/tops.8524af82.js" rel="prefetch">
         <link href="/js/watch.43f292d2.js" rel="prefetch">
         <link href="/js/watch.intro.59df8746.js" rel="prefetch">
-        <link href="/js/watch.player.29177bd5.js" rel="prefetch">
+        <link href="/js/watch.player.64045b40.js" rel="prefetch">
         <link href="/js/welcome.045cb9bf.js" rel="prefetch">
         <link href="/css/app.48a9f048.css" rel="preload" as="style">
-        <link href="/js/app.b091a752.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.781299a5.js" rel="preload" as="script">
+        <link href="/js/app.b87f7deb.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.22f4aca4.js" rel="preload" as="script">
         <link href="/css/app.48a9f048.css" rel="stylesheet">
 
         <!-- Yandex.Metrika counter -->
@@ -80,14 +81,13 @@ include_once($core);
         <noscript><div><img src="https://mc.yandex.ru/watch/68637091" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
     </head>
-    <body>
-        <div id="app"></div>
+    <body id="app" scheme="dark">
         <script src="/vendor/js/jquery.js?version=1"></script>
         <script src="/vendor/js/popper.min.js?version=1"></script>
         <script src="/vendor/js/icon.js?version=1"></script>
         <script src="/vendor/js/bootstrap.min.js?version=1"></script>
         <script src="/vendor/js/mdb.min.js?version=1"></script>
-        <script src="/js/chunk-vendors.781299a5.js"></script>
-        <script src="/js/app.b091a752.js"></script>
+        <script src="/js/chunk-vendors.22f4aca4.js"></script>
+        <script src="/js/app.b87f7deb.js"></script>
     </body>
 </html>
