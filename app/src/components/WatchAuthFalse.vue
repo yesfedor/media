@@ -99,7 +99,7 @@ export default {
       filmLength: undefined,
       description: undefined,
       facts: undefined,
-      jwtFree: 'eyJhbGciOiJzaGEyNTYiLCJ0eXAiOiJKV1QiLCJ1bmlxdWUiOiIxOSJ9.eyJ1aWQiOiIxOSIsIm5hbWUiOiJJTlkiLCJzdXJuYW1lIjoiTWVkaWEiLCJtYWlsIjoibWVkaWFGcmVlQGlueS5zdSIsImF1dGgiOnRydWV9.5330ea31f0ce3a4f126dab8b592eaf9711a0c2a764c95b8d8eecf2af75acfa8d'
+      jwtFree: 'eyJhbGciOiJzaGEyNTYiLCJ0eXAiOiJKV1QiLCJ1bmlxdWUiOiI0OCJ9.eyJ1aWQiOiI0OCIsIm5hbWUiOiJKV1QiLCJzdXJuYW1lIjoiRnJlZSIsIm1haWwiOiJmcmVlQG1lZGlhLmlueS5zdSIsImF1dGgiOnRydWV9.35c9a99002816824a42cb1121b66df793a779349b9345877cec7ecca5901f128'
     }
   },
   methods: {

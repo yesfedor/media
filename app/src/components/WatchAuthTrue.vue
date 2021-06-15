@@ -14,7 +14,7 @@
                   <a class="btn btn-link btn-sm" :class="(currentPlayer === 'bazon' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='bazon'">Bazon</a>
                 </h4>
               </div>
-              <div :class="(isPlayerActive ? 'd-none':'d-block')" class="col-12 embed-responsive embed-responsive-16by9">
+              <div :class="(isPlayerActive ? 'd-none':'d-lg-block')" class="col-12 embed-responsive embed-responsive-16by9">
                 <div class="embed-responsive-item"></div>
               </div>
               <div id="player-layout" class="col-12 embed-responsive embed-responsive-16by9">
@@ -114,6 +114,7 @@ export default {
   mixins: [windowScrollPosition('position')],
   data () {
     return {
+      updateViewInterval: 0,
       isPlayerActive: true,
       currentPlayer: '',
       auth: true,
@@ -141,9 +142,19 @@ export default {
     else this.currentPlayer = 'bazon'
     this.render()
     this.getRecoms()
-    console.log(this.position)
+  },
+  unmounted () {
+    this.stopViewInterval()
   },
   methods: {
+    startViewInterval () {
+      this.updateViewInterval = setInterval(() => {
+        axios.get(`https://iny.su/api.php?_action=media.watch&v=0.1&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
+      }, 7210000)
+    },
+    stopViewInterval () {
+      clearInterval(this.updateViewInterval)
+    },
     setPlayerClassPositionDefault () {
       const $player = document.querySelector('#player-layout')
       this.isPlayerActive = true
@@ -175,6 +186,7 @@ export default {
       }, 0)
     },
     render () {
+      this.startViewInterval()
       axios
         .get(`https://iny.su/api.php?_action=media.watch&v=0.1&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
         .then(res => {
@@ -268,6 +280,7 @@ export default {
       this.auth = isAuth
     },
     kpid () {
+      this.stopViewInterval()
       this.render()
       this.getRecoms()
     }
