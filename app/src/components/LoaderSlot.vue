@@ -1,6 +1,6 @@
 <template>
   <slot v-if="state === 'data200'" name="data200"></slot>
-  <div v-if="state === 'loading'" class="row text-center align-items-center justify-content-center h10vh">
+  <div v-if="state === 'loading'" class="row text-center align-items-center justify-content-center" :class="height">
     <loader-full />
   </div>
   <slot v-if="state === 'data404'" name="data404"></slot>
@@ -19,6 +19,11 @@ export default {
       required: true,
       type: String,
       default: ''
+    },
+    height: {
+      required: false,
+      type: String,
+      default: 'h10vh'
     }
   }
 }

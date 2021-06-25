@@ -1,6 +1,6 @@
 {
   "name": "inymedia",
-  "version": "5.2.1",
+  "version": "5.2.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

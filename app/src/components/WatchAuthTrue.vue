@@ -1,100 +1,108 @@
 <template>
   <div class="container-fluid mt-5">
     <div class="d-none d-lg-block bg-poster-image" :style="{'background-image':getBgImage()}"></div>
-    <div class="row py-3">
-      <div class="col-12 col-md-10 offset-md-1">
-        <div class="row">
-          <div class="col-12 col-xl-9 mt-3">
+    <loader-slot height="h100vh" :state="loaderMain">
+      <template #data200>
+        <div class="row py-3">
+          <div class="col-12 col-md-10 offset-md-1">
             <div class="row">
-              <div class="col-12 text-center text-md-left px-md-0">
-                <h4 class="theme-title w-100">
-                  Плеер:
-                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'svetacdn' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='svetacdn'">Svetacdn</a>
-                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'allohalive' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='allohalive'">Allohalive</a>
-                  <a class="btn btn-link btn-sm" :class="(currentPlayer === 'bazon' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='bazon'">Bazon</a>
-                </h4>
+              <div class="col-12 col-xl-9 mt-3">
+                <div class="row">
+                  <div class="col-12 text-center text-md-left px-md-0">
+                    <h4 class="theme-title w-100">
+                      Плеер:
+                      <a class="btn btn-link btn-sm" :class="(currentPlayer === 'svetacdn' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='svetacdn'">Svetacdn</a>
+                      <a class="btn btn-link btn-sm" :class="(currentPlayer === 'allohalive' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='allohalive'">Allohalive</a>
+                      <a class="btn btn-link btn-sm" :class="(currentPlayer === 'bazon' ? 'btn-primary':'btn-outline-primary')" @click="currentPlayer='bazon'">Bazon</a>
+                    </h4>
+                  </div>
+                  <div :class="(isPlayerActive ? 'd-none':'d-lg-block')" class="col-12 embed-responsive embed-responsive-16by9">
+                    <div class="embed-responsive-item"></div>
+                  </div>
+                  <div id="player-layout" class="col-12 embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" :src="getSrc(currentPlayer)" frameborder="0" scrolling="no" allowfullscreen="" referrerpolicy="origin"></iframe>
+                  </div>
+                  <div class="col-12 px-3 px-md-0">
+                    <h4 class="w-75 text-left theme-title text-capitalize mt-3 mb-0 float-left">{{type}} {{nameRu}}</h4>
+                    <h4 class="w-25 text-right text-muted mt-3 mb-0 float-right">{{ratingAgeLimits}}</h4>
+                  </div>
+                  <hr class="w-100 theme-border-white mt-3 mb-3">
+                  <div class="col-12 col-lg-4 px-0 text-center text-lg-left">
+                    <h4 class="theme-text my-2">Информация к {{type}}у</h4>
+                  </div>
+                  <div class="col-12 col-lg-8 px-0 text-center text-lg-right mt-3 mt-lg-0">
+                    <!--<button type="button" class="btn btn-rounded btn-outline-primary theme-duration ml-3" data-toggle="modal" data-target="#modalStaffByKpid">Больше</button> -->
+                    <a href="https://go.iny.su/donate" target="_blank" class="btn btn-outline-primary btn-rounded">Донат</a>
+                    <button @click="subsManager()" class="btn btn-rounded theme-duration ml-3" :class="(is_subscription ? 'btn-outline-primary':'btn-outline-red')">{{(is_subscription ? 'Отписаться':'Подписаться')}}</button>
+                  </div>
+                  <div class="col-12 px-0 my-3">
+                    <ul class="list-group list-group-flush rounded">
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="float-left w-50 text-left theme-title">Год производства</span>
+                        <span class="float-right w-50 text-left">{{year}}</span>
+                      </li>
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="float-left w-50 text-left theme-title">Страна</span>
+                        <span class="float-right w-50 text-left">{{countries}}</span>
+                      </li>
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="float-left w-50 text-left theme-title">Жанр</span>
+                        <span class="float-right w-50 text-left">{{genres}}</span>
+                      </li>
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="float-left w-50 text-left theme-title">Слоган</span>
+                        <span class="float-right w-50 text-left">{{slogan}}</span>
+                      </li>
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="float-left w-50 text-left theme-title">Время</span>
+                        <span class="float-right w-50 text-left">{{filmLength}}</span>
+                      </li>
+                      <li class="list-group-item theme-panel theme-text">
+                        <span class="text-left theme-title">Описание:</span> {{description}}
+                      </li>
+                    </ul>
+                  </div>
+                <div class="col-12 theme-panel rounded text-center py-3 my-3">
+                  <h4 class="theme-title py-3 mb-3">Факты</h4>
+                  <div class="row">
+                    <template v-if="facts.length > 0">
+                      <h5 v-for="(content, idx) in facts" :key="idx" class="d-block theme-text text-left px-3 mb-3">
+                        <span class="theme-link">#{{idx + 1}}</span> {{content}}
+                      </h5>
+                    </template>
+                    <div v-else class="col-12">
+                      <h5 class="d-block theme-text text-center px-3 mb-3">Факты еще не подобраны</h5>
+                    </div>
+                  </div>
+                </div>
+                <div id="iny-main-comments" class="col-12 theme-panel rounded py-3 my-3">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      <h4 class="text-center text-center theme-title py-3">Комментарии</h4>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div :class="(isPlayerActive ? 'd-none':'d-lg-block')" class="col-12 embed-responsive embed-responsive-16by9">
-                <div class="embed-responsive-item"></div>
+            </div>
+            <div class="col-12 col-xl-3">
+              <div class="row px-0 pl-xl-5 ">
+                <div class="col-12 text-center mb-3">
+                  <h4 class="theme-title my-0 py-3">Рекомендации</h4>
+                </div>
               </div>
-              <div id="player-layout" class="col-12 embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" :src="getSrc(currentPlayer)" frameborder="0" scrolling="no" allowfullscreen="" referrerpolicy="origin"></iframe>
-              </div>
-              <div class="col-12 px-3 px-md-0">
-                <h4 class="w-75 text-left theme-title text-capitalize mt-3 mb-0 float-left">{{type}} {{nameRu}}</h4>
-                <h4 class="w-25 text-right text-muted mt-3 mb-0 float-right">{{ratingAgeLimits}}</h4>
-              </div>
-              <hr class="w-100 theme-border-white mt-3 mb-3">
-              <div class="col-12 col-lg-4 px-0 text-center text-lg-left">
-                <h4 class="theme-text my-2">Информация к {{type}}у</h4>
-              </div>
-              <div class="col-12 col-lg-8 px-0 text-center text-lg-right mt-3 mt-lg-0">
-                <!--<button type="button" class="btn btn-rounded btn-outline-primary theme-duration ml-3" data-toggle="modal" data-target="#modalStaffByKpid">Больше</button> -->
-                <a href="https://go.iny.su/donate" target="_blank" class="btn btn-outline-primary btn-rounded">Донат</a>
-                <button @click="subsManager()" class="btn btn-rounded theme-duration ml-3" :class="(is_subscription ? 'btn-outline-primary':'btn-outline-red')">{{(is_subscription ? 'Отписаться':'Подписаться')}}</button>
-              </div>
-              <div class="col-12 px-0 my-3">
-                <ul class="list-group list-group-flush rounded">
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="float-left w-50 text-left theme-title">Год производства</span>
-                    <span class="float-right w-50 text-left">{{year}}</span>
-                  </li>
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="float-left w-50 text-left theme-title">Страна</span>
-                    <span class="float-right w-50 text-left">{{countries}}</span>
-                  </li>
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="float-left w-50 text-left theme-title">Жанр</span>
-                    <span class="float-right w-50 text-left">{{genres}}</span>
-                  </li>
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="float-left w-50 text-left theme-title">Слоган</span>
-                    <span class="float-right w-50 text-left">{{slogan}}</span>
-                  </li>
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="float-left w-50 text-left theme-title">Время</span>
-                    <span class="float-right w-50 text-left">{{filmLength}}</span>
-                  </li>
-                  <li class="list-group-item theme-panel theme-text">
-                    <span class="text-left theme-title">Описание:</span> {{description}}
-                  </li>
-                </ul>
-              </div>
-            <div class="col-12 theme-panel rounded text-center py-3 my-3">
-              <h4 class="theme-title py-3 mb-3">Факты</h4>
-              <div class="row">
-                <template v-if="facts.length > 0">
-                  <h5 v-for="(content, idx) in facts" :key="idx" class="d-block theme-text text-left px-3 mb-3">
-                    <span class="theme-link">#{{idx + 1}}</span> {{content}}
-                  </h5>
+              <loader-slot :state="loaderRecs">
+                <template #data200>
+                  <div class="row px-0 pl-xl-5">
+                    <MediaCart v-for="cart in recoms" :key="cart.filmId" view="max-content" :kpid="cart.filmId" :type="cart.type" :nameRu="cart.nameRu" :year="cart.year" />
+                  </div>
                 </template>
-                <div v-else class="col-12">
-                  <h5 class="d-block theme-text text-center px-3 mb-3">Факты еще не подобраны</h5>
-                </div>
-              </div>
+              </loader-slot>
             </div>
-            <div id="iny-main-comments" class="col-12 theme-panel rounded py-3 my-3">
-              <div class="row">
-                <div class="col-12 text-center">
-                  <h4 class="text-center text-center theme-title py-3">Комментарии</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-xl-3">
-          <div class="row px-0 pl-xl-5 ">
-            <div class="col-12 text-center mb-3">
-              <h4 class="theme-title my-0 py-3">Рекомендации</h4>
-            </div>
-          </div>
-          <div class="row px-0 pl-xl-5">
-            <MediaCart v-for="cart in recoms" :key="cart.filmId" view="max-content" :kpid="cart.filmId" :type="cart.type" :nameRu="cart.nameRu" :year="cart.year" />
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      </template>
+    </loader-slot>
   </div>
 </template>
 
@@ -102,11 +110,13 @@
 import axios from 'axios'
 import MediaCart from './MediaCart'
 import windowScrollPosition from '../mixins/window-scroll-position'
+import LoaderSlot from '../components/LoaderSlot'
 
 export default {
   name: 'WatchAuthTrue',
   components: {
-    MediaCart
+    MediaCart,
+    LoaderSlot
   },
   props: {
     kpid: String
@@ -114,6 +124,8 @@ export default {
   mixins: [windowScrollPosition('position')],
   data () {
     return {
+      loaderMain: '',
+      loaderRecs: '',
       updateViewInterval: 0,
       isPlayerActive: true,
       currentPlayer: '',
@@ -186,11 +198,13 @@ export default {
       }, 0)
     },
     render () {
+      this.loaderMain = 'loading'
       this.startViewInterval()
       axios
         .get(`https://iny.su/api.php?_action=media.watch&v=0.1&kpid=${this.kpid}&jwt=${this.$store.getters.JWT}`)
         .then(res => {
-          const watchData = res.data.watchData.data
+          const watchData = res?.data?.watchData?.data
+          if (res?.data?.watchData?.data?.filmId) this.loaderMain = 'data200'
 
           if (res.data.is_subscription === 'subscribe') this.is_subscription = true
           else this.is_subscription = false
@@ -222,10 +236,12 @@ export default {
         })
     },
     getRecoms () {
+      this.loaderRecs = 'loading'
       axios
         .get(`https://iny.su/api.php?_action=media.similarsByKpid&v=0.1&kpid=${this.kpid}`)
         .then(res => {
-          this.recoms = res.data
+          this.recoms = res?.data
+          if (res?.data?.length > 0) this.loaderRecs = 'data200'
         })
     },
     subsManager () {

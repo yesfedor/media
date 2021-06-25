@@ -137,7 +137,6 @@ export default {
   },
   mounted () {
     this.load()
-    console.log(this.auth)
   }
 }
 </script>
