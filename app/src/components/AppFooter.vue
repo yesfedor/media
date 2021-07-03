@@ -12,12 +12,19 @@
 export default {
   name: 'AppFooter',
   props: {
-    logo: String
+    logo: {
+      type: String,
+      required: true
+    }
   },
   data () {
     return {
-      version: 'media-v5.1.2',
       year: new Date().getFullYear()
+    }
+  },
+  computed: {
+    version () {
+      return this.$store.getters.VERSION_LAST
     }
   }
 }

@@ -3,14 +3,14 @@
 }
 .card-poster {
     /* height: 70vh; */
-    filter: grayscale(1);
+    filter: grayscale(0.85);
     background-color: #242424;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: overlay;
     transition: background-color, filter;
-    transition-duration: 0.5s;
+    transition-duration: 0.5;
 }
 .card-poster:hover {
     filter: grayscale(0);
@@ -46,7 +46,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: brightness(0.3) blur(6px);
+    filter: brightness(0.4) blur(6px);
     transition-duration: 1s;
 }
 .bg-poster-image:after {

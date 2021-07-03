@@ -221,7 +221,9 @@ export default {
           this.premiereWorldCountry = watchData.premiereWorldCountry
           this.filmLength = watchData.filmLength
           this.facts = (watchData.facts.length > 0 ? watchData.facts : [])
+
           document.title = `Смотреть ${this.type} ${this.nameRu} (${this.year}) - на INY Media`
+
           const countries = []
           watchData.countries.map(obj => {
             countries.push(obj.country)

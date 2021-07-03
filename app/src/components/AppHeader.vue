@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top theme-header z-depth-0" :class="(position[1] === 0 && $route.name !== 'Watch' && $route.name !== 'Search' ? '':'theme-panel-blur theme-border-bottom-header')">
+  <nav class="navbar navbar-expand-lg fixed-top theme-header" :class="(position[1] === 0 && $route.name !== 'Watch' && $route.name !== 'Search' ? 'z-depth-0':'theme-panel-blur theme-border-bottom-header z-depth-2')">
     <div class="container">
       <router-link class="navbar-brand theme-title" :to="getLogoLink()">{{logo}}</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appNavbarTop" aria-controls="appNavbarTop" aria-expanded="false" aria-label="Toggle navigation">
