@@ -99,7 +99,7 @@ export default {
       // eslint-disable-next-line
       jarallax(document.querySelectorAll('.jarallax'), {speed: 0});
       // maybeWelcome set
-      localStorage.setItem('isWelcomeShowV2', 'true')
+      localStorage.setItem('isWelcomeShowV3', 'true')
     }
   },
   computed: {

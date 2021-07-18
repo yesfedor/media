@@ -55,7 +55,7 @@
                 </ul>
               </div>
               <div class="col-12 theme-panel rounded text-center py-3 mt-3">
-                <a class="h3 theme-title py-3 my-0" :href="'https://iny.su/auth?to=media.iny.su&_origin=true&api=true&kpid=' + kpid">
+                <a class="h3 theme-title py-3 my-0" :href="'https://apollo.iny.su/auth?app_id=2'">
                   Авторизоваться, что бы начать просмотр
                 </a>
               </div>

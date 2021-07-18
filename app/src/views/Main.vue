@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     maybeWelcome () {
-      const isWelcomeShow = localStorage.getItem('isWelcomeShowV2') || false
+      const isWelcomeShow = localStorage.getItem('isWelcomeShowV3') || false
       if (!isWelcomeShow) this.$router.push('/welcome')
     }
   },

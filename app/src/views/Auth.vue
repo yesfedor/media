@@ -3,7 +3,7 @@
       <div v-if="!status" class="row d-flex justify-content-center align-items-center mt-5">
         <div class="col-12 col-lg-6 my-3 py-3 border border-white rounded theme-panel text-center">
           <h3 class="theme-title my-0 py-3">Авторизация</h3>
-          <h4 class="theme-text my-0 py-3">Выполните авторизацию на INY.SU, чтобы получить доступ к просмотру фильмов и сериалов</h4>
+          <h4 class="theme-text my-0 py-3">Выполните авторизацию на apollo.INY.SU, чтобы получить доступ к просмотру фильмов и сериалов</h4>
           <button class="btn btn-outline-white btn-rounded my-3 w-75" @click="authWithIny()">Авторизоваться</button>
         </div>
       </div>
@@ -14,7 +14,7 @@
             <li class="list-group-item theme-panel-primary border border-primary theme-title py-3">Управление аккаунтом</li>
             <router-link to="/playlist/dashboard" class="list-group-item list-group-item-action theme-panel theme-title py-3">Плейлисты</router-link>
             <router-link to="/history" class="list-group-item list-group-item-action theme-panel theme-title py-3">История просмотров</router-link>
-            <a class="list-group-item list-group-item-action theme-panel theme-title py-3" href="https://iny.su" target="_blank">Вернуться на INY.SU</a>
+            <a class="list-group-item list-group-item-action theme-panel theme-title py-3" href="https://apollo.iny.su" target="_blank">Вернуться на INY.SU</a>
             <a @click.prevent="logout()" href="#" class="list-group-item list-group-item-action danger-color border-danger theme-title py-3">Выйти</a>
           </ul>
         </div>
@@ -51,7 +51,7 @@ export default {
       return welcomeText
     },
     authWithIny () {
-      open('https://iny.su/auth?to=media.iny.su&_origin=true&api=true')
+      open('https://apollo.iny.su/auth?app_id=2')
     },
     logout () {
       this.$store.commit('LOGOUT')
